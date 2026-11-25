@@ -27,6 +27,9 @@ public final class ChemLabConfig {
     public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_ORBITS;
     public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_PARTICLES;
     public static final ForgeConfigSpec.IntValue CLIENT_MAX_MODIFIERS;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_POST_PROCESSING;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_POST_VORTEX;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_POST_SPECTRAL;
     public static final ForgeConfigSpec.DoubleValue CLIENT_INTENSITY;
     public static final ForgeConfigSpec.DoubleValue CLIENT_TRANSITION_SCALE;
     public static final ForgeConfigSpec SPEC;
@@ -62,6 +65,9 @@ public final class ChemLabConfig {
         CLIENT_LAYER_ORBITS = client.comment("Enable orbiting spatial motif layers.").define("layerOrbits", true);
         CLIENT_LAYER_PARTICLES = client.comment("Enable procedural screen-space motif particles.").define("layerParticles", true);
         CLIENT_MAX_MODIFIERS = client.comment("Maximum distinct additive modifiers retained at once; overflow is resolved by item ID.").defineInRange("maximumModifiers", 4, 1, 8);
+        CLIENT_POST_PROCESSING = client.comment("Enable ChemCraft's full-frame post-processing passes for profiles that request them.").define("fullScreenPostProcessing", true);
+        CLIENT_POST_VORTEX = client.comment("Enable profile-configured spatial vortex distortion in the full-frame post chain.").define("postStageVortex", true);
+        CLIENT_POST_SPECTRAL = client.comment("Enable profile-configured spectral color separation in the full-frame post chain.").define("postStageSpectral", true);
         CLIENT_INTENSITY = client.comment("Maximum local visual/audio presentation intensity; 0 disables the presentation layer.").defineInRange("intensity", 0.8, 0.0, 1.0);
         CLIENT_TRANSITION_SCALE = client.comment("Scale onset and recovery transition length; higher values are slower.").defineInRange("transitionScale", 1.0, 0.25, 4.0);
         client.pop();

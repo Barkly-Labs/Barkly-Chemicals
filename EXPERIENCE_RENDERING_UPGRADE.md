@@ -1,66 +1,60 @@
-# ChemCraft layered perception renderer upgrade
+# ChemCraft full-screen substance presentation renderer
 
-## Summary
+## Result and reference footage
 
-The existing Forge 1.20.1 effect activation, packet delivery, profile lifecycle, accessibility configuration, and normal GUI/camera/audio hooks were retained. Rendering was separated from the event subscriber and profile data now composes independently ordered modules. Profile and modifier files are loaded through client resource reload listeners. The implementation remains an in-GUI presentation effect; it does not claim a post-process over the 3D world.
+The attached archive's source matched the existing workspace source. The earlier `EXPERIENCE_RENDERING_UPGRADE.md` described a GUI-only composition engine and explicitly said there was no shader or framebuffer path; that was still true in the source before this revision.
 
-## Architecture
+I inspected the supplied MP4 by sampling the recording from start to finish, then checking full-sized frames around 80–130 seconds. The opening and the section around 80–100 seconds show menus, loading, the world, and additive inventory. The active effect begins around 109 seconds: the rendered world becomes a full-frame, center-focused radial vortex with evolving refraction and spectral color splitting. I used those broad presentation characteristics as a technical reference. No medical accuracy is claimed, and no reference assets or shader code were copied.
 
-- `ExperiencePresentationEvents` owns Forge callbacks only: HOTBAR post overlay, menu post render, and camera angle feedback. It delegates drawing to the composition engine.
-- `ExperienceProfile` now contains immutable `ExperienceVisualLayer` entries. Existing top-level strength, pattern and lifecycle timing fields remain supported; a compatibility fallback synthesizes simple layers for legacy profiles.
-- `ExperienceLayerRenderers` owns a renderer registry keyed by declarative `type`, sorts layers by `order`, limits each frame to 96 submitted layers, and composes each active profile's layers. New client renderer types can be registered without expanding the Forge event handler.
-- Built-in modules: `edge_tint`, `bands`, `motif`, `orbit`, `particles`, `motion_trail`, and `chromatic`.
-- All GUI operations use the active `GuiGraphics` batch. Layers use profile intensity, lifecycle phase, local accessibility intensity, layer opacity, and bounded animation parameters.
-- `ExperienceModifierCatalog` loads fictional additive definitions independently. Each additive exposes a map of bounded channels, a clamped intensity multiplier, tint, and active duration. Renderer code does not know additive IDs or encode additive-specific behavior.
-- Active modifier IDs are retained, so resource reloads replace the effective data without leaving stale definitions active. Modifier collisions are deterministic: duplicate IDs refresh; when the configured limit is exceeded, modifiers are sorted by ID and the lexicographically later entries are removed.
+## Current architecture
 
-## Resource schema
+- The existing registered item registry, profile catalog, server-to-client activation packets, lifecycle timer, additive item use/consumption, client modifier catalog, camera/audio hooks, GUI composition renderer, and accessibility controls remain in place.
+- `ExperiencePresentationEvents` listens to Forge's 1.20.1 `RenderLevelStageEvent` and delegates at `AFTER_LEVEL`. Forge documents that stage as occurring after `LevelRenderer.renderLevel` completes. The effect therefore processes the full rendered 3D scene target before the later GUI composition. It does not process HUD pixels or later hand rendering.
+- `FullScreenPostProcessor` creates and owns an independent Minecraft `PostChain` against the main render target. It does not use `GameRenderer.loadEffect`, which would replace Minecraft's current post effect. It uses `PostChain`'s public 1.20.1 constructor, `addTempTarget`, `addPass`, `resize`, and `process` APIs, and `PostPass.getEffect()` for per-frame uniforms. The ordered stage list is a small registry of stage specs, rather than pass construction being embedded in the event handler.
+- The chain has two ordered full-frame stages. The first samples the complete world target and performs center-weighted radial swirl/refraction. The second reads that result and adds animated radial chromatic separation and a profile palette contribution, then writes back to the main target.
+- The chain is compiled on the client resource reload thread's apply phase, disposed/recreated on reload, resized to the main target's dimensions, and disabled with an error log after resource or runtime failure until the next reload. The legacy GUI layers remain as a safe fallback.
+- `ExperienceProfile.layers` remains the data-driven profile format. The fictional `echo_prism` profile now includes `post_vortex` and `post_spectral` stage definitions. Other profiles can request those stage types without renderer rewrites. Profile phase/intensity and layer color feed the post uniforms.
+- Additive modifiers remain JSON-driven. The four modifier files now include generic `post_vortex` and `post_spectral` channels; shader source does not branch on additive IDs.
 
-Each profile JSON may add a `layers` array. Fields:
+## Shader resources
 
-| Field | Meaning | Validation |
-| --- | --- | --- |
-| `id` | Profile-local layer name | fallback generated if omitted |
-| `type` | Registered renderer module | unknown values safely skipped |
-| `order` | Composition order | clamped to -10000..10000 |
-| `intensity`, `opacity` | Layer contribution and alpha factor | clamped to 0..1 |
-| `speed` | Animation rate | clamped to 0..4 |
-| `scale` | Size multiplier | clamped to 0.25..4 |
-| `color` | RGB override | six hex digits; defaults to profile color |
-| `accessibility` | `visual`, `hud`, `trails`, `chromatic`, or `motion` | unknown category falls back to visual |
+Minecraft 1.20.1's older `PostChain`/`PostPass` system uses `assets/<namespace>/shaders/post` for the chain descriptor and program definitions under `assets/minecraft/shaders/program` for these post-pass `EffectInstance` names. The program names are uniquely prefixed `barklychem_post_*` to avoid overriding vanilla program IDs. This is specific to the 1.20.1 format and is not the newer `post_effect` schema used by recent Minecraft releases.
 
-A maximum of 16 layer definitions is accepted per profile; the composition pass processes at most 96 profile-layer pairs. Existing `onset_ticks`, `peak_ticks`, and `recovery_ticks` still control the shared phase envelope; every child layer receives that envelope. Legacy profiles without `layers` continue to work.
+| Resource | Purpose |
+| --- | --- |
+| `assets/barklychemlab/shaders/post/chemcraft_perception.json` | Owned chain and intermediate target descriptor |
+| `assets/minecraft/shaders/program/barklychem_post_vertex.vsh` | Full-screen post-pass vertex shader |
+| `assets/minecraft/shaders/program/barklychem_post_vortex.json` | First stage program definition and uniforms |
+| `assets/minecraft/shaders/program/barklychem_post_vortex.fsh` | Full-frame radial refraction/swirl |
+| `assets/minecraft/shaders/program/barklychem_post_spectral.json` | Second stage program definition and uniforms |
+| `assets/minecraft/shaders/program/barklychem_post_spectral.fsh` | Chromatic channel separation and profile palette |
 
-Modifier JSON lives under `assets/barklychemlab/experience_modifiers/<id>.json`:
+Animation uniforms are supplied from the existing profile phase, local intensity/accessibility settings, main-target dimensions, frame time, weighted per-layer speed and scale, opacity, and profile/additive stage palettes. The shaders are ordinary Minecraft 1.20.1 GLSL 150 post programs; no external rendering dependency was added.
 
-```json
-{
-  "id": "prism_salt",
-  "label": "Prism Salt",
-  "channels": { "fringe": 0.22, "warp": 0.12, "strength": 0.04 },
-  "intensity_multiplier": 1.10,
-  "tint": "#D49EFF",
-  "duration_ticks": 1200
-}
-```
+## Profile and additive schema
 
-Channels are data-only and clamped to -0.5..0.5; intensity multiplier is clamped to 0.5..1.5; duration is clamped to 20..12000 ticks. IDs must match the resource filename. The server continues to consume an additive only when its registered item is used while an experience is active; modifier content is resolved client-side for local presentation.
+Profile JSON layers retain these bounded fields: `id`, `type`, `order`, `intensity`, `opacity`, `speed`, `scale`, `color`, and `accessibility`. In addition to GUI types, the two supported full-frame types are `post_vortex` and `post_spectral`. They share the profile onset/peak/recovery lifecycle and support additive channel adjustments. Existing flat profile fields and the legacy layer fallback remain for compatibility.
+
+Additive definitions are resource-reloadable JSON with an ID, label, generic numeric `channels`, bounded `intensity_multiplier`, `tint`, and `duration_ticks`. The modifiers influence post stages through data channels, with the same clamping, server-side item-use gate, inventory consumption, and deterministic active-modifier cap as before.
 
 ## Accessibility
 
-All layers respect master simulation and visual switches, local intensity and transition scale. `hud`, `trails`, `chromatic`, and `motion` groups respect the existing HUD, trail, chromatic, and reduced-motion settings. New independent controls were added for edge tint, bands, motifs, orbits, particles, and the maximum active modifier count. Reduced motion freezes/disables moving modules. Flash prevention caps the edge animation variation and alpha. Existing F8 reset and master switch remain.
+The post chain obeys the master simulation switch, visual-effects switch, maximum local intensity, profile transition envelope, full-screen post toggle, independent vortex/spectral toggles, and the chromatic-fringe toggle. Reduced motion removes animated shader movement and substantially reduces the vortex contribution. Flash reduction slows the animation. The existing immediate F8 reset removes active state so the post stages stop on the next render. HUD, audio, and camera switches remain independent.
 
-## Render pipeline limits
+The two shader stages are full-frame and can be intense. The post stage toggles and global intensity limit are the primary accessibility controls; the legacy GUI settings do not silently override those master controls.
 
-Forge's `RenderGuiOverlayEvent.Post` and `ScreenEvent.Render.Post` support composited screen-space graphics using the current GUI render target, and `ViewportEvent.ComputeCameraAngles` supports camera angle changes. These hooks are appropriate for GUI overlays, motifs, and bounded camera feedback. They do not provide captured scene pixels for blur, temporal framebuffer feedback, actual chromatic separation of the world, optical focus/depth manipulation, or world geometry warping. This code does not register a shader, custom framebuffer, or post-chain. Those capabilities require a separate post-processing pipeline and shader compatibility work; they are not represented as implemented here.
+## Rendering compatibility and remaining limits
 
-## Audit findings retained from the previous diagnostic
+- The processing input is the Minecraft main world render target at Forge's `AFTER_LEVEL` stage. It includes the rendered world scene, but not later HUD drawing; held-item rendering is also later in the vanilla frame and is not distorted by this hook.
+- The supplied Addictives source archive was inspected separately; the architecture findings and compatibility distinctions are recorded in [ADDICTIVES_RENDERING_ANALYSIS.md](ADDICTIVES_RENDERING_ANALYSIS.md). ChemCraft reuses public PostChain concepts without copying decompiled code or replacing the shared GameRenderer post-effect slot.
+- Full-screen effects from other mods may interact with this post pass depending on their stage/order. Mods that directly replace the main target or use incompatible post-processing can conflict. OptiFine/shader-pack compatibility is not established.
+- There is no temporal framebuffer history, depth-aware blur, or post-processing of GUI/hand pixels. The implementation provides two real full-frame shader stages; it does not claim those other effects.
+- The program resources live in Minecraft's legacy `shaders/program` namespace due to 1.20.1's post-pass loader behavior. Names are unique, but a resource pack can still override them.
 
-The prior renderer was one large event-handler method and selected one pattern string with a switch. Profiles otherwise contained useful per-effect channels and lifecycle timing. Additive definitions were hard-coded in a Java `Map`. Existing network activation is server-to-using-client, with duration/profile transmitted and local profile intensity/accessibility evaluated client-side. Camera and audio hooks are separate. The previous runtime diagnostic established no shader/framebuffer path and could not launch the game due missing offline Minecraft metadata.
+## Verification status
 
-## Verification
-
-- `gradle build --no-daemon --offline`: **passed**, including Java compilation, resource processing, tests task, JAR packaging, and Forge reobfuscation. Gradle printed its known asset-index network warning and existing deprecation warnings.
-- `scripts/verify_render_resources.py`: **passed**; validated 20 profiles, 71 layer definitions, 4 modifiers, renderer/accessibility IDs, profile and modifier path IDs, field bounds, and JSON parsing.
-- Gradle `test`: **NO-SOURCE**; the repository has no JUnit suite. The Python resource validator is the new automated schema check.
-- In-game launch and visual verification: **not performed**. Previous `runClient --offline` was blocked before launch by ForgeGradle `downloadMCMeta` (`Network is unreachable`); no Minecraft log was produced. The build proves API compilation, not visible rendering, resource reload timing, graphics-driver behavior, or multiplayer synchronization.
+- Resource/schema validator: see `scripts/verify_render_resources.py`; checks profile/modifier JSON, layer bounds and IDs, post-chain target descriptor, program JSON, shader file references, shader uniform declarations, and the fictional demo profile.
+- The validator is run after the shader/resource changes. The video was visually inspected at sample points including 110, 120, and 130 seconds to distinguish active gameplay from inventory footage.
+- The latest Gradle build could not start: the wrapper attempted to download Gradle 8.8 from `services.gradle.org` and the execution environment returned `Network is unreachable`. This environment also has no system Gradle binary. Therefore the new Java source has not been compiled here.
+- No GLSL compiler or Minecraft client launch was available. The shader programs have static resource-reference checks, not driver compilation or live visual confirmation. Do not treat the implementation as runtime-verified.
+- The uploaded ZIP includes source and documentation, not a newly rebuilt JAR. The prior JAR does not include this renderer change and should not be installed as the result of this revision.

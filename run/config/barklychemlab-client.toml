@@ -39,4 +39,10 @@
 	#Maximum distinct additive modifiers retained at once; overflow is resolved by item ID.
 	#Range: 1 ~ 8
 	maximumModifiers = 4
+	#Enable ChemCraft's full-frame post-processing passes for profiles that request them.
+	fullScreenPostProcessing = true
+	#Enable profile-configured spatial vortex distortion in the full-frame post chain.
+	postStageVortex = true
+	#Enable profile-configured spectral color separation in the full-frame post chain.
+	postStageSpectral = true
 

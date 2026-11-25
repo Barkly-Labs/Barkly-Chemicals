@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.client.event.RenderGuiOverlayEvent;
+import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.client.event.ViewportEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -41,6 +42,10 @@ public final class ExperiencePresentationEvents {
     @SubscribeEvent public static void menuOverlay(ScreenEvent.Render.Post event) {
         if (!ChemLabConfig.CLIENT_SIMULATION_ENABLED.get() || !ChemLabConfig.CLIENT_VISUAL_EFFECTS.get()) return;
         draw(event.getGuiGraphics(), true);
+    }
+
+    @SubscribeEvent public static void fullFrame(RenderLevelStageEvent event) {
+        FullScreenPostProcessor.render(event);
     }
 
     private static void draw(net.minecraft.client.gui.GuiGraphics graphics, boolean menu) {

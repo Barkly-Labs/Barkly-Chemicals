@@ -21,6 +21,7 @@ public final class ExperienceClientEvents {
     @SubscribeEvent public static void registerReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(new ExperienceProfileCatalog());
         event.registerReloadListener(new ExperienceModifierCatalog());
+        event.registerReloadListener(new FullScreenPostProcessor());
     }
 
     @Mod.EventBusSubscriber(modid = BarklyChemLab.MOD_ID, value = Dist.CLIENT)
@@ -30,7 +31,9 @@ public final class ExperienceClientEvents {
             ClientExperienceState.tick();
             while (CLEAR_EXPERIENCE.consumeClick()) if (ChemLabConfig.CLIENT_INSTANT_RESET.get()) ClientExperienceState.clear();
         }
-        @SubscribeEvent public static void logout(ClientPlayerNetworkEvent.LoggingOut event) { ClientExperienceState.clear(); }
+        @SubscribeEvent public static void logout(ClientPlayerNetworkEvent.LoggingOut event) {
+            ClientExperienceState.clear();
+        }
     }
 
     private ExperienceClientEvents() { }

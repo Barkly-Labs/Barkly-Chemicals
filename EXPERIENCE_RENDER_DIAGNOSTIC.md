@@ -46,3 +46,7 @@ I changed profile lookup to fall back to the exact packaged JSON resource and lo
 - The available desktop app inventory did not include Minecraft. Therefore the following are **not runtime-verified**: packet delivery in a live session, profile catalog reload, the `HOTBAR` event firing, screen visibility/alpha, rendering exceptions, shader compilation (none is implemented), or multiplayer behavior.
 
 The new client logs are intended to establish each runtime stage once the mod is launched: profile reload count, activation and intensity, receipt of the render hook, and profile draw. A live launch is required before calling the effect visually confirmed.
+
+## Follow-up: full-frame renderer revision
+
+This diagnostic records the pre-upgrade GUI-only investigation. The project now includes a separate `PostChain`-based full-frame world-target pass, described in [EXPERIENCE_RENDERING_UPGRADE.md](EXPERIENCE_RENDERING_UPGRADE.md). That newer code has not been compiled or launched in the current environment; treat shader loading and visual output as pending runtime verification.

@@ -47,7 +47,7 @@ Every registered item has its own generated 16×16 pixel-art texture. The 15 nam
 
 ## Experience simulation and accessibility
 
-Using a profile item applies its existing server-side Minecraft effect and starts a separate local experience presentation profile. Each item has a distinct JSON profile. Four craftable fictional additives (Prism Salt, Echo Dust, Lumen Resin, Stillwater Essence) modify active presentation channels for a limited time. Additives require an active profile and are consumed outside creative mode. The effect layer is local to each player; it does not replicate subjective effects to others. See [EXPERIENCE_SIMULATION.md](EXPERIENCE_SIMULATION.md) for each substance's evidence record, the research-to-effect mapping, and technical limits. See [EXPERIENCE_RENDER_DIAGNOSTIC.md](EXPERIENCE_RENDER_DIAGNOSTIC.md) for the rendering-pipeline trace, root-cause findings, code changes, and runtime verification status.
+Using a profile item applies its existing server-side Minecraft effect and starts a separate local experience presentation profile. Each item has a distinct JSON profile. Four craftable fictional additives (Prism Salt, Echo Dust, Lumen Resin, Stillwater Essence) modify active presentation channels for a limited time. Additives require an active profile and are consumed outside creative mode. The effect layer is local to each player; it does not replicate subjective effects to others. See [EXPERIENCE_SIMULATION.md](EXPERIENCE_SIMULATION.md) for each substance's evidence record and research-to-effect mapping. See [EXPERIENCE_RENDERING_UPGRADE.md](EXPERIENCE_RENDERING_UPGRADE.md) for the full-frame post chain, shader resources, accessibility, and verification limits.
 
 Client accessibility settings are stored in `config/barklychemlab-client.toml`; common progression settings remain in `config/barklychemlab-common.toml`.
 
@@ -57,9 +57,9 @@ Client accessibility settings are stored in `config/barklychemlab-client.toml`; 
 - `accessibility.advancementReactions`: enable or disable achievement reactions.
 - `accessibility.reactionSounds`: enable or disable the quiet chime (off by default).
 - `accessibility.profileParticles`: enable or disable decorative particles.
-- Client `experience_simulation_accessibility`: master, visual, camera, audio and HUD toggles; reduced motion; trails/chromatic fringe; intensity and transition scaling; and immediate reset (default F8, rebindable in Controls). Camera and audio effects are disabled by default.
+- Client `experience_simulation_accessibility`: master, visual, camera, audio and HUD toggles; reduced motion; GUI and full-screen stage toggles; trails/chromatic fringe; modifier cap; intensity and transition scaling; and immediate reset (default F8, rebindable in Controls). Camera and audio effects are disabled by default.
 
-The presentation modules use Forge overlay, camera-angle and sound-instance hooks. They do not alter player input, movement speed, or other players' views.
+The presentation system now uses Forge overlay, camera-angle, sound-instance, and `AFTER_LEVEL` full-frame post-processing hooks. Its post chain processes the rendered 3D scene before the HUD; it does not affect player input, movement speed, or other players' views.
 
 ## Progression, challenges, and reactions
 
@@ -91,4 +91,4 @@ Add a message pool in `event/AdvancementReactions.java` keyed by the advancement
 
 `EXISTING_MOD_AUDIT.md` records the actual pack versions, localized content and overlap decisions. The mod intentionally does not duplicate the pack's existing cannabis, LSD, DMT, mushroom, salvia, cocaine, methamphetamine, MDMA, heroin, morphine, fentanyl, nicotine/tobacco, or Benadryl items. It also does not attempt to represent every candidate with real-substance items; uncovered categories are represented as abstract research profiles.
 
-The profile layer composes declarative, ordered GUI modules from JSON (edge tint, animated bands, motifs, orbit patterns, particles, motion trails, and chromatic styling), with separately reloaded data-driven fictional modifiers. It is not a full-scene post-processing shader or true frequency-domain audio filter; the render architecture, schema, limits, and runtime verification status are documented in [EXPERIENCE_RENDERING_UPGRADE.md](EXPERIENCE_RENDERING_UPGRADE.md). There are no direct Create or Ad Astra item dependencies; dimension progression uses vanilla Nether/End travel to remain compatible if those optional mods change. Full client/server multiplayer runtime testing still requires launching the built mod inside a Minecraft instance.
+Profiles compose declarative GUI layers and optional full-frame shader stages from JSON. The fictional Echo Prism demonstrates radial refraction and spectral separation through two ordered post passes; modifiers adjust those passes via data channels. The renderer processes the world target before HUD/hand rendering. Build and runtime verification status is documented in [EXPERIENCE_RENDERING_UPGRADE.md](EXPERIENCE_RENDERING_UPGRADE.md). There are no direct Create or Ad Astra item dependencies; dimension progression uses vanilla Nether/End travel to remain compatible if those optional mods change. Full client/server multiplayer runtime testing still requires launching the built mod inside a Minecraft instance.

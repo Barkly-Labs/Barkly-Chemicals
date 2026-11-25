@@ -4,7 +4,9 @@
   "channels": {
     "warp": -0.05,
     "movement": -0.1,
-    "strength": -0.12
+    "strength": -0.12,
+    "post_vortex": -0.12,
+    "post_spectral": -0.06
   },
   "intensity_multiplier": 0.78,
   "tint": "#72BBAF",

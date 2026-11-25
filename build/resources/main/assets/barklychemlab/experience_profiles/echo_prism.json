@@ -96,6 +96,28 @@
       "scale": 0.8,
       "color": "#a983eb",
       "accessibility": "motion"
+    },
+    {
+      "id": "full_frame_vortex",
+      "type": "post_vortex",
+      "order": 80,
+      "intensity": 0.72,
+      "opacity": 0.9,
+      "speed": 0.5,
+      "scale": 1.0,
+      "color": "#A983EB",
+      "accessibility": "motion"
+    },
+    {
+      "id": "spectral_fracture",
+      "type": "post_spectral",
+      "order": 90,
+      "intensity": 0.56,
+      "opacity": 0.72,
+      "speed": 0.35,
+      "scale": 1.0,
+      "color": "#65DDE8",
+      "accessibility": "chromatic"
     }
   ]
 }

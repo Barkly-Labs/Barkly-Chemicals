@@ -109,6 +109,37 @@ public final class ClientExperienceState {
         return ((int)(r/total)<<16) | ((int)(g/total)<<8) | (int)(b/total);
     }
 
+    /**
+     * Blends the palette for one full-screen stage. Active modifier tints contribute
+     * only when that modifier changes the requested stage, keeping rendering data
+     * independent from additive item classes.
+     */
+    public static int blendedStageColor(String channel) {
+        double r = 0, g = 0, b = 0, total = 0;
+        for (Layer active : layers()) {
+            for (ExperienceVisualLayer layer : active.profile().layers()) {
+                if (!layer.type().equals(channel)) continue;
+                double weight = Math.max(0.001, active.intensity() * layer.intensity() * layer.opacity());
+                r += ((layer.color() >> 16) & 255) * weight;
+                g += ((layer.color() >> 8) & 255) * weight;
+                b += (layer.color() & 255) * weight;
+                total += weight;
+            }
+        }
+        for (ActiveAdditive active : ADDITIVES) {
+            ExperienceAdditive modifier = ExperienceModifierCatalog.get(active.id);
+            if (modifier == null) continue;
+            double weight = Math.abs(modifier.channel(channel));
+            if (weight <= 0.001) continue;
+            r += ((modifier.tint() >> 16) & 255) * weight;
+            g += ((modifier.tint() >> 8) & 255) * weight;
+            b += (modifier.tint() & 255) * weight;
+            total += weight;
+        }
+        if (total == 0) return blendedColor();
+        return ((int)(r / total) << 16) | ((int)(g / total) << 8) | (int)(b / total);
+    }
+
     public static String primaryId() { return ACTIVE.isEmpty() ? "" : ACTIVE.get(ACTIVE.size()-1).profile.id(); }
     public static float primaryPhase() { return ACTIVE.isEmpty() ? 0 : ACTIVE.get(ACTIVE.size()-1).phase(); }
     public static String primaryStage() { return ACTIVE.isEmpty() ? "" : ACTIVE.get(ACTIVE.size()-1).stage(); }

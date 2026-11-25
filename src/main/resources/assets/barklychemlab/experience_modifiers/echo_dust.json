@@ -4,7 +4,9 @@
   "channels": {
     "trail": 0.26,
     "echo": 0.22,
-    "muffle": 0.04
+    "muffle": 0.04,
+    "post_vortex": 0.12,
+    "post_spectral": 0.08
   },
   "intensity_multiplier": 1.04,
   "tint": "#83CFEA",

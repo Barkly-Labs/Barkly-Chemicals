@@ -4,7 +4,9 @@
   "channels": {
     "fringe": 0.22,
     "warp": 0.12,
-    "strength": 0.04
+    "strength": 0.04,
+    "post_vortex": 0.05,
+    "post_spectral": 0.18
   },
   "intensity_multiplier": 1.1,
   "tint": "#D49EFF",
