@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:sample_vial"
+  },
+  "second": {
+    "item": "barklychemlab:lunar_glass"
+  },
+  "result": {
+    "item": "barklychemlab:ghb_tide",
+    "count": 1
+  },
+  "work": 80
+}

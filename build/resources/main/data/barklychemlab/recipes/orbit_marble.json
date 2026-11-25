@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:sky_silk"
+  },
+  "second": {
+    "item": "barklychemlab:resonance_core"
+  },
+  "result": {
+    "item": "barklychemlab:orbit_marble",
+    "count": 1
+  },
+  "work": 120
+}

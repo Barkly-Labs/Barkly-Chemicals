@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="barklychemlab"
+version="0.1.0"
+displayName="Barkly Chem Lab Research"
+authors="Barkly Labs"
+description='''Fictional research artifacts, a laboratory workbench, and accessible Minecraft-only experience profiles for Barkly Chem Lab.'''
+[[dependencies.barklychemlab]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.28,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.barklychemlab]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.barklychemlab]]
+modId="jei"
+mandatory=false
+versionRange="[15.75,)"
+ordering="AFTER"
+side="CLIENT"

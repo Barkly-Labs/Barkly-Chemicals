@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:sample_vial"
+  },
+  "second": {
+    "item": "barklychemlab:resonance_core"
+  },
+  "result": {
+    "item": "barklychemlab:oxycodone_moon",
+    "count": 1
+  },
+  "work": 110
+}

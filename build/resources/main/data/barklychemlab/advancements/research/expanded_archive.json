@@ -1,0 +1,233 @@
+{
+  "parent": "barklychemlab:research/experience_collection",
+  "display": {
+    "icon": {
+      "item": "barklychemlab:kratom_archive"
+    },
+    "title": {
+      "translate": "advancement.barklychemlab.expanded_archive.title"
+    },
+    "description": {
+      "translate": "advancement.barklychemlab.expanded_archive.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "profile_00": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:kratom_archive"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_01": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:dxm_echo"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_02": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:ketamine_geometry"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_03": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:nitrous_cloud"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_04": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:mescaline_sun"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_05": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:twocb_prism"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_06": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:mephedrone_spark"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_07": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:ghb_tide"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_08": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:benzodiazepine_lantern"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_09": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:barbiturate_archive"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:oxycodone_moon"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:diphenhydramine_moth"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:alcohol_campfire"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:pcp_mirror"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:methylphenidate_clockwork"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

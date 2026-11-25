@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "barklychemlab:echo_shard"
+    },
+    "title": {
+      "translate": "advancement.barklychemlab.outer_ledger.title"
+    },
+    "description": {
+      "translate": "advancement.barklychemlab.outer_ledger.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "entered_end": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "from": "minecraft:overworld",
+        "to": "minecraft:the_end"
+      }
+    },
+    "carry_echo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:echo_shard"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "barklychemlab:research/dimension_survey",
+  "rewards": {
+    "experience": 50
+  }
+}

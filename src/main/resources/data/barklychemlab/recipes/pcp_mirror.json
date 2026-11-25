@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:star_petals"
+  },
+  "second": {
+    "item": "barklychemlab:echo_shard"
+  },
+  "result": {
+    "item": "barklychemlab:pcp_mirror",
+    "count": 1
+  },
+  "work": 90
+}

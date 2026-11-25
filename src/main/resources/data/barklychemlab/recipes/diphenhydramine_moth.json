@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:prism_pollen"
+  },
+  "second": {
+    "item": "barklychemlab:lunar_glass"
+  },
+  "result": {
+    "item": "barklychemlab:diphenhydramine_moth",
+    "count": 1
+  },
+  "work": 90
+}

@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "barklychemlab:insight_fragment"
+    },
+    "title": {
+      "translate": "advancement.barklychemlab.first_insight.title"
+    },
+    "description": {
+      "translate": "advancement.barklychemlab.first_insight.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:insight_fragment"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "barklychemlab:research/calibration",
+  "rewards": {
+    "recipes": [
+      "barklychemlab:lumen_bloom",
+      "barklychemlab:echo_prism",
+      "barklychemlab:orbit_marble",
+      "barklychemlab:hush_chime",
+      "barklychemlab:warmth_crystal"
+    ],
+    "experience": 20
+  }
+}

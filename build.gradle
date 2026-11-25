@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+    }
+    dependencies { classpath 'net.minecraftforge.gradle:ForgeGradle:6.0.54' }
+}
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'maven-publish'
+
+group = 'com.barklylabs'
+version = '0.1.0'
+base { archivesName = 'barklychemlab' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+    runs {
+        configureEach { workingDirectory project.file('run'); property 'forge.logging.console.level', 'info'; mods { barklychemlab { source sourceSets.main } } }
+        client { }
+        server { args '--nogui' }
+    }
+}
+
+repositories {
+    maven { url = 'https://maven.blamejared.com/' }
+}
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.28'
+    compileOnly fg.deobf('mezz.jei:jei-1.20.1-forge:15.75.0.242')
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    def replaceProperties = [minecraft_version: '1.20.1', forge_version: '47.4.28', mod_id: 'barklychemlab', mod_name: 'Barkly Chem Lab Research', mod_version: project.version]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) { expand replaceProperties }
+    outputs.file(layout.buildDirectory.file('resources/main/assets/barklychemlab/jei/research_recipes.json'))
+    doLast {
+        def recipeRoot = file('src/main/resources/data/barklychemlab/recipes')
+        def catalog = []
+        fileTree(recipeRoot).matching { include '**/*.json' }.files.sort { a, b -> a.name <=> b.name }.each { recipeFile ->
+            def recipe = new groovy.json.JsonSlurper().parse(recipeFile)
+            if (recipe.type == 'barklychemlab:research') {
+                recipe.id = "barklychemlab:${recipeFile.name.substring(0, recipeFile.name.length() - 5)}"
+                catalog.add(recipe)
+            }
+        }
+        def catalogFile = file("${layout.buildDirectory.get().asFile}/resources/main/assets/barklychemlab/jei/research_recipes.json")
+        catalogFile.parentFile.mkdirs()
+        catalogFile.text = groovy.json.JsonOutput.toJson(catalog)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

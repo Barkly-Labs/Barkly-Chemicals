@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "barklychemlab:insight_fragment"
+    },
+    "title": {
+      "translate": "advancement.barklychemlab.dimension_survey.title"
+    },
+    "description": {
+      "translate": "advancement.barklychemlab.dimension_survey.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "entered_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "from": "minecraft:overworld",
+        "to": "minecraft:the_nether"
+      }
+    },
+    "carry_insight": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:insight_fragment"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "barklychemlab:research/first_insight",
+  "rewards": {
+    "experience": 25
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:field_notebook"
+  },
+  "second": {
+    "item": "barklychemlab:resonance_core"
+  },
+  "result": {
+    "item": "barklychemlab:insight_fragment",
+    "count": 2
+  },
+  "work": 120
+}

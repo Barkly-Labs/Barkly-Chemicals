@@ -1,0 +1,19 @@
+
+[fictional_experiences]
+	#Enable the short, Minecraft-only effects on research artifacts.
+	enabled = true
+	#Base experience duration in ticks; clamped to 20..6000.
+	#Range: 20 ~ 6000
+	durationTicks = 600
+	#Reuse delay for an artifact, in ticks; clamped to 0..72000.
+	#Range: 0 ~ 72000
+	cooldownTicks = 1200
+
+[accessibility]
+	#Show one short, personalized chat reaction when a Barkly research challenge is earned.
+	advancementReactions = true
+	#Play a quiet chime with Barkly research challenge reactions.
+	reactionSounds = false
+	#Show brief decorative Minecraft particles when using a profile artifact.
+	profileParticles = true
+

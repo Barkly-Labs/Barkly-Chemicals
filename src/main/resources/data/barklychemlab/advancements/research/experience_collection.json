@@ -1,0 +1,110 @@
+{
+  "display": {
+    "icon": {
+      "item": "barklychemlab:echo_prism"
+    },
+    "title": {
+      "translate": "advancement.barklychemlab.experience_collection.title"
+    },
+    "description": {
+      "translate": "advancement.barklychemlab.experience_collection.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "profile_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:lumen_bloom"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:echo_prism"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:orbit_marble"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:hush_chime"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profile_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:warmth_crystal"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "barklychemlab:research/first_insight",
+  "rewards": {
+    "recipes": [
+      "barklychemlab:kratom_archive",
+      "barklychemlab:dxm_echo",
+      "barklychemlab:ketamine_geometry",
+      "barklychemlab:nitrous_cloud",
+      "barklychemlab:mescaline_sun",
+      "barklychemlab:twocb_prism",
+      "barklychemlab:mephedrone_spark",
+      "barklychemlab:ghb_tide",
+      "barklychemlab:benzodiazepine_lantern",
+      "barklychemlab:barbiturate_archive",
+      "barklychemlab:oxycodone_moon",
+      "barklychemlab:diphenhydramine_moth",
+      "barklychemlab:alcohol_campfire",
+      "barklychemlab:pcp_mirror",
+      "barklychemlab:methylphenidate_clockwork"
+    ],
+    "experience": 50
+  }
+}

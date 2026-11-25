@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:sample_vial"
+  },
+  "second": {
+    "item": "barklychemlab:sky_silk"
+  },
+  "result": {
+    "item": "barklychemlab:benzodiazepine_lantern",
+    "count": 1
+  },
+  "work": 80
+}

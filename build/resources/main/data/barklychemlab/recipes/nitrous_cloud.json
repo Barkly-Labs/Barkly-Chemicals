@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:lunar_glass"
+  },
+  "second": {
+    "item": "barklychemlab:prism_pollen"
+  },
+  "result": {
+    "item": "barklychemlab:nitrous_cloud",
+    "count": 1
+  },
+  "work": 70
+}

@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:prism_pollen"
+  },
+  "second": {
+    "item": "barklychemlab:resonance_core"
+  },
+  "result": {
+    "item": "barklychemlab:warmth_crystal",
+    "count": 1
+  },
+  "work": 100
+}

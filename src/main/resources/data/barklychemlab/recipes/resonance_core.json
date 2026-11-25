@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "RER",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "barklychemlab:echo_shard"
+    }
+  },
+  "result": {
+    "item": "barklychemlab:resonance_core",
+    "count": 1
+  }
+}

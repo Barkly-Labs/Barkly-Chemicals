@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:prism_pollen"
+  },
+  "second": {
+    "item": "barklychemlab:echo_shard"
+  },
+  "result": {
+    "item": "barklychemlab:lumen_bloom",
+    "count": 1
+  },
+  "work": 100
+}

@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:star_petals"
+  },
+  "second": {
+    "item": "barklychemlab:prism_pollen"
+  },
+  "result": {
+    "item": "barklychemlab:alcohol_campfire",
+    "count": 1
+  },
+  "work": 70
+}

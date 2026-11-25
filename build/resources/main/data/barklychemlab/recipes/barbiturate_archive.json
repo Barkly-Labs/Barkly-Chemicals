@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:resonance_core"
+  },
+  "second": {
+    "item": "barklychemlab:star_petals"
+  },
+  "result": {
+    "item": "barklychemlab:barbiturate_archive",
+    "count": 1
+  },
+  "work": 100
+}

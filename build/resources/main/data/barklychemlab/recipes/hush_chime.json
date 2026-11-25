@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:star_petals"
+  },
+  "second": {
+    "item": "barklychemlab:lunar_glass"
+  },
+  "result": {
+    "item": "barklychemlab:hush_chime",
+    "count": 1
+  },
+  "work": 100
+}
