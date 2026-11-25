@@ -26,4 +26,17 @@
 	#Scale onset and recovery transition length; higher values are slower.
 	#Range: 0.25 ~ 4.0
 	transitionScale = 1.0
+	#Enable the profile edge tint layer.
+	layerEdgeTint = true
+	#Enable animated geometric band layers.
+	layerBands = true
+	#Enable profile signature motif layers.
+	layerMotifs = true
+	#Enable orbiting spatial motif layers.
+	layerOrbits = true
+	#Enable procedural screen-space motif particles.
+	layerParticles = true
+	#Maximum distinct additive modifiers retained at once; overflow is resolved by item ID.
+	#Range: 1 ~ 8
+	maximumModifiers = 4
 

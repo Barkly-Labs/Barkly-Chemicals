@@ -18,5 +18,40 @@
   "pattern": "cloud",
   "onset_ticks": 60,
   "peak_ticks": 180,
-  "recovery_ticks": 220
+  "recovery_ticks": 220,
+  "layers": [
+    {
+      "id": "edge",
+      "type": "edge_tint",
+      "order": 10,
+      "intensity": 0.36,
+      "opacity": 0.74,
+      "speed": 0.35,
+      "scale": 1,
+      "color": "#a9d9e8",
+      "accessibility": "visual"
+    },
+    {
+      "id": "signature",
+      "type": "motif",
+      "order": 20,
+      "intensity": 0.68,
+      "opacity": 0.62,
+      "speed": 0.7,
+      "scale": 1,
+      "color": "#a9d9e8",
+      "accessibility": "hud"
+    },
+    {
+      "id": "afterimage",
+      "type": "motion_trail",
+      "order": 40,
+      "intensity": 0.16,
+      "opacity": 0.8,
+      "speed": 0.65,
+      "scale": 1,
+      "color": "#a9d9e8",
+      "accessibility": "trails"
+    }
+  ]
 }

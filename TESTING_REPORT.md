@@ -40,3 +40,12 @@
 - Checked Forge 47.4.28 mapped API signatures for `RenderGuiOverlayEvent.Post`, `VanillaGuiOverlay.HOTBAR`, and `RegisterClientReloadListenersEvent`.
 - Found no shader registration, GLSL resources, or custom framebuffer code in the implementation. The current renderer is a GUI overlay.
 - `runClient --offline` could not launch: ForgeGradle failed at `downloadMCMeta` with `Network is unreachable`; no game logs or visual observation were available. Do not treat rendering as in-game verified. See `EXPERIENCE_RENDER_DIAGNOSTIC.md`.
+
+## Layered perception renderer upgrade
+
+- Added the in-place renderer and modifier architecture documented in [EXPERIENCE_RENDERING_UPGRADE.md](EXPERIENCE_RENDERING_UPGRADE.md).
+- Latest `gradle build --no-daemon --offline`: passed (`BUILD SUCCESSFUL`), including Java compile, resource processing, `test` task, jar assembly and reobfuscation. Gradle emitted its cached-metadata asset-index network warning plus existing deprecation warnings.
+- `gradle test`: `NO-SOURCE`; no behavioral Java tests exist.
+- `python3 scripts/verify_render_resources.py`: passed; 20 profiles, 71 layers, 4 modifier records validated.
+- Minecraft was not launched. ForgeGradle's prior offline `runClient` attempt stopped at `downloadMCMeta` with `Network is unreachable`. Rendering visibility and live resource reload remain unverified.
+- The renderer uses GUI draw operations and camera hooks. It does not perform post-processing on rendered world pixels and has no custom framebuffer/shader chain.

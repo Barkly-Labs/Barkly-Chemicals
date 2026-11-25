@@ -1,0 +1,12 @@
+{
+  "id": "echo_dust",
+  "label": "Echo Dust",
+  "channels": {
+    "trail": 0.26,
+    "echo": 0.22,
+    "muffle": 0.04
+  },
+  "intensity_multiplier": 1.04,
+  "tint": "#83CFEA",
+  "duration_ticks": 1200
+}

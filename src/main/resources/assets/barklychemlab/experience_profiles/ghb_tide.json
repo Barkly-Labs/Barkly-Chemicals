@@ -18,5 +18,29 @@
   "pattern": "tide",
   "onset_ticks": 80,
   "peak_ticks": 250,
-  "recovery_ticks": 260
+  "recovery_ticks": 260,
+  "layers": [
+    {
+      "id": "edge",
+      "type": "edge_tint",
+      "order": 10,
+      "intensity": 0.32,
+      "opacity": 0.74,
+      "speed": 0.35,
+      "scale": 1,
+      "color": "#5eabc0",
+      "accessibility": "visual"
+    },
+    {
+      "id": "signature",
+      "type": "motif",
+      "order": 20,
+      "intensity": 0.68,
+      "opacity": 0.62,
+      "speed": 0.7,
+      "scale": 1,
+      "color": "#5eabc0",
+      "accessibility": "hud"
+    }
+  ]
 }

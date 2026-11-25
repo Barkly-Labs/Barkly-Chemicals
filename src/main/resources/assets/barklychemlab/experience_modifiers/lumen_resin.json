@@ -1,0 +1,12 @@
+{
+  "id": "lumen_resin",
+  "label": "Lumen Resin",
+  "channels": {
+    "strength": 0.08,
+    "movement": 0.04,
+    "warp": 0.06
+  },
+  "intensity_multiplier": 1.08,
+  "tint": "#F2D77A",
+  "duration_ticks": 1200
+}

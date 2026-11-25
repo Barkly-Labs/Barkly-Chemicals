@@ -21,6 +21,12 @@ public final class ChemLabConfig {
     public static final ForgeConfigSpec.BooleanValue CLIENT_HUD_FEEDBACK;
     public static final ForgeConfigSpec.BooleanValue CLIENT_PREVENT_FLASHING;
     public static final ForgeConfigSpec.BooleanValue CLIENT_INSTANT_RESET;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_EDGE_TINT;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_BANDS;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_MOTIFS;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_ORBITS;
+    public static final ForgeConfigSpec.BooleanValue CLIENT_LAYER_PARTICLES;
+    public static final ForgeConfigSpec.IntValue CLIENT_MAX_MODIFIERS;
     public static final ForgeConfigSpec.DoubleValue CLIENT_INTENSITY;
     public static final ForgeConfigSpec.DoubleValue CLIENT_TRANSITION_SCALE;
     public static final ForgeConfigSpec SPEC;
@@ -50,6 +56,12 @@ public final class ChemLabConfig {
         CLIENT_HUD_FEEDBACK = client.comment("Show small profile and recovery feedback away from essential controls.").define("hudFeedback", true);
         CLIENT_PREVENT_FLASHING = client.comment("Prevent rapid brightness/color changes; all profile animation is slow when enabled.").define("preventFlashing", true);
         CLIENT_INSTANT_RESET = client.comment("Allow the configurable Clear Experience key to immediately remove all local presentation effects.").define("instantReset", true);
+        CLIENT_LAYER_EDGE_TINT = client.comment("Enable the profile edge tint layer.").define("layerEdgeTint", true);
+        CLIENT_LAYER_BANDS = client.comment("Enable animated geometric band layers.").define("layerBands", true);
+        CLIENT_LAYER_MOTIFS = client.comment("Enable profile signature motif layers.").define("layerMotifs", true);
+        CLIENT_LAYER_ORBITS = client.comment("Enable orbiting spatial motif layers.").define("layerOrbits", true);
+        CLIENT_LAYER_PARTICLES = client.comment("Enable procedural screen-space motif particles.").define("layerParticles", true);
+        CLIENT_MAX_MODIFIERS = client.comment("Maximum distinct additive modifiers retained at once; overflow is resolved by item ID.").defineInRange("maximumModifiers", 4, 1, 8);
         CLIENT_INTENSITY = client.comment("Maximum local visual/audio presentation intensity; 0 disables the presentation layer.").defineInRange("intensity", 0.8, 0.0, 1.0);
         CLIENT_TRANSITION_SCALE = client.comment("Scale onset and recovery transition length; higher values are slower.").defineInRange("transitionScale", 1.0, 0.25, 4.0);
         client.pop();

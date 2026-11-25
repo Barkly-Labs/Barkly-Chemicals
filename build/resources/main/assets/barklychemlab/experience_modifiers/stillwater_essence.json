@@ -1,0 +1,12 @@
+{
+  "id": "stillwater_essence",
+  "label": "Stillwater Essence",
+  "channels": {
+    "warp": -0.05,
+    "movement": -0.1,
+    "strength": -0.12
+  },
+  "intensity_multiplier": 0.78,
+  "tint": "#72BBAF",
+  "duration_ticks": 1200
+}

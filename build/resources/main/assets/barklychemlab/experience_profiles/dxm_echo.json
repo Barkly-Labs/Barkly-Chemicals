@@ -18,5 +18,73 @@
   "pattern": "afterimage",
   "onset_ticks": 80,
   "peak_ticks": 250,
-  "recovery_ticks": 300
+  "recovery_ticks": 300,
+  "layers": [
+    {
+      "id": "edge",
+      "type": "edge_tint",
+      "order": 10,
+      "intensity": 0.48,
+      "opacity": 0.74,
+      "speed": 0.35,
+      "scale": 1,
+      "color": "#7b9bea",
+      "accessibility": "visual"
+    },
+    {
+      "id": "signature",
+      "type": "motif",
+      "order": 20,
+      "intensity": 0.68,
+      "opacity": 0.62,
+      "speed": 0.7,
+      "scale": 1,
+      "color": "#7b9bea",
+      "accessibility": "hud"
+    },
+    {
+      "id": "ripple_bands",
+      "type": "bands",
+      "order": 30,
+      "intensity": 0.22,
+      "opacity": 0.55,
+      "speed": 0.5,
+      "scale": 1,
+      "color": "#7b9bea",
+      "accessibility": "motion"
+    },
+    {
+      "id": "afterimage",
+      "type": "motion_trail",
+      "order": 40,
+      "intensity": 0.48,
+      "opacity": 0.8,
+      "speed": 0.65,
+      "scale": 1,
+      "color": "#7b9bea",
+      "accessibility": "trails"
+    },
+    {
+      "id": "spectrum_edges",
+      "type": "chromatic",
+      "order": 50,
+      "intensity": 0.16,
+      "opacity": 0.7,
+      "speed": 0.2,
+      "scale": 1,
+      "color": "#7b9bea",
+      "accessibility": "chromatic"
+    },
+    {
+      "id": "orbit_motes",
+      "type": "orbit",
+      "order": 60,
+      "intensity": 0.28,
+      "opacity": 0.45,
+      "speed": 0.35,
+      "scale": 0.9,
+      "color": "#7b9bea",
+      "accessibility": "motion"
+    }
+  ]
 }

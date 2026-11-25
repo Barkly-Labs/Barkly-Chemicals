@@ -18,5 +18,40 @@
   "pattern": "bloom",
   "onset_ticks": 90,
   "peak_ticks": 260,
-  "recovery_ticks": 220
+  "recovery_ticks": 220,
+  "layers": [
+    {
+      "id": "edge",
+      "type": "edge_tint",
+      "order": 10,
+      "intensity": 0.35,
+      "opacity": 0.74,
+      "speed": 0.35,
+      "scale": 1,
+      "color": "#a8e8a5",
+      "accessibility": "visual"
+    },
+    {
+      "id": "signature",
+      "type": "motif",
+      "order": 20,
+      "intensity": 0.68,
+      "opacity": 0.62,
+      "speed": 0.7,
+      "scale": 1,
+      "color": "#a8e8a5",
+      "accessibility": "hud"
+    },
+    {
+      "id": "motes",
+      "type": "particles",
+      "order": 70,
+      "intensity": 0.38,
+      "opacity": 0.42,
+      "speed": 0.3,
+      "scale": 0.8,
+      "color": "#a8e8a5",
+      "accessibility": "motion"
+    }
+  ]
 }

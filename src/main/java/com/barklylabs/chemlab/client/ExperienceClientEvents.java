@@ -18,7 +18,10 @@ public final class ExperienceClientEvents {
     public static final KeyMapping CLEAR_EXPERIENCE = new KeyMapping("key.barklychemlab.clear_experience", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_F8, "key.categories.barklychemlab");
 
     @SubscribeEvent public static void registerKeys(RegisterKeyMappingsEvent event) { event.register(CLEAR_EXPERIENCE); }
-    @SubscribeEvent public static void registerReloadListeners(RegisterClientReloadListenersEvent event) { event.registerReloadListener(new ExperienceProfileCatalog()); }
+    @SubscribeEvent public static void registerReloadListeners(RegisterClientReloadListenersEvent event) {
+        event.registerReloadListener(new ExperienceProfileCatalog());
+        event.registerReloadListener(new ExperienceModifierCatalog());
+    }
 
     @Mod.EventBusSubscriber(modid = BarklyChemLab.MOD_ID, value = Dist.CLIENT)
     public static final class ClientEvents {

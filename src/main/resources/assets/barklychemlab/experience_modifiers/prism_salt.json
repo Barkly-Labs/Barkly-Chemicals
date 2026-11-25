@@ -1,0 +1,12 @@
+{
+  "id": "prism_salt",
+  "label": "Prism Salt",
+  "channels": {
+    "fringe": 0.22,
+    "warp": 0.12,
+    "strength": 0.04
+  },
+  "intensity_multiplier": 1.1,
+  "tint": "#D49EFF",
+  "duration_ticks": 1200
+}

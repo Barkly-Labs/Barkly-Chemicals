@@ -1,15 +1,38 @@
 package com.barklylabs.chemlab.client;
 
+import com.google.gson.JsonObject;
 import java.util.Map;
+import java.util.TreeMap;
 
-/** Fictional modifiers for presentation layers; these never modify player controls or server stats. */
-public record ExperienceAdditive(String id, String label, float trail, float fringe, float warp, float muffle, float echo, float movement, float intensityMultiplier, int tint) {
-    private static final Map<String, ExperienceAdditive> ALL = Map.of(
-            "prism_salt", new ExperienceAdditive("prism_salt", "Prism Salt", .18f, .34f, .14f, 0, 0, 0, 1.10f, 0xD49EFF),
-            "echo_dust", new ExperienceAdditive("echo_dust", "Echo Dust", .32f, .04f, .12f, .04f, .28f, 0, 1.04f, 0x83CFEA),
-            "lumen_resin", new ExperienceAdditive("lumen_resin", "Lumen Resin", .04f, .08f, .08f, 0, 0, .04f, 1.08f, 0xF2D77A),
-            "stillwater_essence", new ExperienceAdditive("stillwater_essence", "Stillwater Essence", 0, 0, -.05f, .12f, 0, -.10f, .78f, 0x72BBAF)
-    );
-    public static ExperienceAdditive byId(String id) { return ALL.get(id); }
-    public static java.util.Collection<ExperienceAdditive> all() { return ALL.values(); }
+/** Fictional, bounded presentation modifier loaded from the experience_modifiers resource directory. */
+public record ExperienceAdditive(String id, String label, Map<String, Float> channels,
+                                float intensityMultiplier, int tint, int durationTicks) {
+    public ExperienceAdditive {
+        channels = Map.copyOf(channels);
+        intensityMultiplier = clamp(intensityMultiplier, 0.5f, 1.5f);
+        durationTicks = Math.max(20, Math.min(12000, durationTicks));
+        tint &= 0xFFFFFF;
+    }
+    public float channel(String id) { return channels.getOrDefault(id, 0f); }
+
+    public static ExperienceAdditive fromJson(JsonObject json) {
+        String id = json.get("id").getAsString();
+        String label = json.has("label") ? json.get("label").getAsString() : id.replace('_', ' ');
+        TreeMap<String, Float> channels = new TreeMap<>();
+        if (json.has("channels") && json.get("channels").isJsonObject()) {
+            JsonObject values = json.getAsJsonObject("channels");
+            for (String key : values.keySet()) {
+                if (!key.matches("[a-z][a-z0-9_]{0,39}")) continue;
+                channels.put(key, clamp(values.get(key).getAsFloat(), -0.5f, 0.5f));
+            }
+        }
+        String color = json.has("tint") ? json.get("tint").getAsString().replace("#", "") : "FFFFFF";
+        if (color.length() != 6) throw new IllegalArgumentException("Invalid modifier tint for " + id);
+        return new ExperienceAdditive(id, label, channels,
+                json.has("intensity_multiplier") ? json.get("intensity_multiplier").getAsFloat() : 1f,
+                Integer.parseInt(color, 16), json.has("duration_ticks") ? json.get("duration_ticks").getAsInt() : 1200);
+    }
+    private static float clamp(float value, float min, float max) {
+        return Float.isFinite(value) ? Math.max(min, Math.min(max, value)) : min;
+    }
 }

@@ -32,11 +32,17 @@ public final class ClientExperienceState {
     public static void clear() { ACTIVE.clear(); ADDITIVES.clear(); }
 
     public static void applyAdditive(String id) {
-        ExperienceAdditive additive = ExperienceAdditive.byId(id);
-        if (additive == null || ACTIVE.isEmpty()) return;
-        ADDITIVES.removeIf(active -> active.additive.id().equals(id));
-        ADDITIVES.add(new ActiveAdditive(additive, ticks + 1200));
-        if (ADDITIVES.size() > 4) ADDITIVES.remove(0);
+        if (!ChemLabConfig.CLIENT_SIMULATION_ENABLED.get() || ACTIVE.isEmpty()) return;
+        ExperienceAdditive additive = ExperienceModifierCatalog.get(id);
+        if (additive == null) {
+            LOGGER.warn("Ignored unknown client modifier '{}'; loaded modifier count {}", id, ExperienceModifierCatalog.size());
+            return;
+        }
+        ADDITIVES.removeIf(active -> active.id.equals(additive.id()));
+        ADDITIVES.add(new ActiveAdditive(additive.id(), ticks + additive.durationTicks()));
+        // Deterministic conflict resolution: retain the four lexicographically first distinct IDs.
+        ADDITIVES.sort(java.util.Comparator.comparing(ActiveAdditive::id));
+        while (ADDITIVES.size() > ChemLabConfig.CLIENT_MAX_MODIFIERS.get()) ADDITIVES.remove(ADDITIVES.size() - 1);
     }
 
     public static void tick() {
@@ -71,16 +77,10 @@ public final class ClientExperienceState {
         double multiplier = 1.0;
         double additive = 0;
         for (ActiveAdditive active : ADDITIVES) {
-            multiplier *= active.additive.intensityMultiplier();
-            additive += switch (channel) {
-                case "trail" -> active.additive.trail();
-                case "fringe" -> active.additive.fringe();
-                case "warp" -> active.additive.warp();
-                case "muffle" -> active.additive.muffle();
-                case "echo" -> active.additive.echo();
-                case "movement" -> active.additive.movement();
-                default -> 0;
-            };
+            ExperienceAdditive modifier = ExperienceModifierCatalog.get(active.id);
+            if (modifier == null) continue;
+            multiplier *= modifier.intensityMultiplier();
+            additive += modifier.channel(channel);
         }
         return (float) Math.max(0, Math.min(0.88, result * Math.max(0.5, Math.min(1.5, multiplier)) + additive));
     }
@@ -96,11 +96,13 @@ public final class ClientExperienceState {
             b += (l.profile().color() & 255) * w;
             total += w;
         }
-        for (ActiveAdditive a : ADDITIVES) {
+        for (ActiveAdditive active : ADDITIVES) {
+            ExperienceAdditive a = ExperienceModifierCatalog.get(active.id);
+            if (a == null) continue;
             float w = 0.18f;
-            r += ((a.additive.tint() >> 16) & 255) * w;
-            g += ((a.additive.tint() >> 8) & 255) * w;
-            b += (a.additive.tint() & 255) * w;
+            r += ((a.tint() >> 16) & 255) * w;
+            g += ((a.tint() >> 8) & 255) * w;
+            b += (a.tint() & 255) * w;
             total += w;
         }
         if (total == 0) return 0xFFFFFF;
@@ -133,5 +135,5 @@ public final class ClientExperienceState {
     }
 
     public record Layer(ExperienceProfile profile, float intensity) { }
-    private record ActiveAdditive(ExperienceAdditive additive, long expiresAt) { }
+    private record ActiveAdditive(String id, long expiresAt) { }
 }

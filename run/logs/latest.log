@@ -1,142 +1,137 @@
-[25Nov2026 12:44:43.916] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.28, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
-[25Nov2026 12:44:43.922] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.21.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[25Nov2026 12:44:44.061] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[25Nov2026 12:44:44.155] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[25Nov2026 12:44:44.371] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[25Nov2026 12:44:44.452] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/nickk/scoop/apps/gradle/current/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[25Nov2026 12:44:44.476] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 26.11.2.261112, ATI Technologies Inc.
-[25Nov2026 12:44:44.827] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.28\2f0765ea31561e9dfaf8eb8b54ac0548cd857559\javafmllanguage-1.20.1-47.4.28.jar is missing mods.toml file
-[25Nov2026 12:44:44.834] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.28\4e54a5f415a61888bd9c5d61b140ae5f86bf665f\lowcodelanguage-1.20.1-47.4.28.jar is missing mods.toml file
-[25Nov2026 12:44:44.842] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.28\4d3efb7da0466927cc5b1e4487c3d3c33ba842d0\mclanguage-1.20.1-47.4.28.jar is missing mods.toml file
-[25Nov2026 12:44:44.852] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.28\99808794b6f9f27ca527ad9db1203409fb8552f8\fmlcore-1.20.1-47.4.28.jar is missing mods.toml file
-[25Nov2026 12:44:44.943] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[25Nov2026 12:44:46.656] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
-[25Nov2026 12:44:48.007] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
-[25Nov2026 12:44:51.471] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 143 milliseconds
-[25Nov2026 12:44:53.282] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/nickk/scoop/apps/gradle/current/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[25Nov2026 12:44:53.282] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/nickk/scoop/apps/gradle/current/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[25Nov2026 12:44:53.320] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[25Nov2026 12:44:53.332] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[25Nov2026 12:44:53.471] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[25Nov2026 12:44:53.740] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.28, for MC 1.20.1 with MCP 20230612.114412
-[25Nov2026 12:44:53.744] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.28 Initialized
-[25Nov2026 12:44:54.463] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
-[25Nov2026 12:44:54.585] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[25Nov2026 12:44:54.619] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file C:\Users\nickk\Documents\Barkly-Chem-Lab\BarklyChemLabResearch\run\config\barklychemlab-client.toml is not correct. Correcting
-[25Nov2026 12:44:54.622] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility was corrected from null to its default, SimpleCommentedConfig:{}. 
-[25Nov2026 12:44:54.622] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.enabled was corrected from null to its default, true. 
-[25Nov2026 12:44:54.622] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.visualEffects was corrected from null to its default, true. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.cameraEffects was corrected from null to its default, false. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.reduceMotion was corrected from null to its default, false. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.visualTrails was corrected from null to its default, true. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.chromaticFringe was corrected from null to its default, true. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.audioEffects was corrected from null to its default, false. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.hudFeedback was corrected from null to its default, true. 
-[25Nov2026 12:44:54.623] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.preventFlashing was corrected from null to its default, true. 
-[25Nov2026 12:44:54.624] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.instantReset was corrected from null to its default, true. 
-[25Nov2026 12:44:54.624] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.intensity was corrected from null to its default, 0.8. 
-[25Nov2026 12:44:54.624] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.transitionScale was corrected from null to its default, 1.0. 
-[25Nov2026 12:44:54.783] [Worker-Main-9/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[25Nov2026 12:44:54.919] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[25Nov2026 12:44:55.695] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.4.28 Target: null
-[25Nov2026 12:44:57.035] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[25Nov2026 12:44:57.036] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[25Nov2026 12:44:57.068] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (JBL Go 5)
-[25Nov2026 12:44:57.069] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[25Nov2026 12:44:57.179] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[25Nov2026 12:44:57.187] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[25Nov2026 12:44:57.188] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[25Nov2026 12:44:57.188] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[25Nov2026 12:44:57.189] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[25Nov2026 12:44:57.192] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[25Nov2026 12:44:57.194] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[25Nov2026 12:44:57.194] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[25Nov2026 12:44:57.194] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[25Nov2026 12:44:57.398] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[25Nov2026 12:44:57.459] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[25Nov2026 12:44:57.461] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[25Nov2026 12:44:57.461] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[25Nov2026 12:44:57.628] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
-[25Nov2026 12:45:01.681] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:item: Object did not get ID it asked for. Name: barklychemlab:prism_salt Expected: 1265 Got: 1286
-[25Nov2026 12:45:01.681] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:item: Object did not get ID it asked for. Name: barklychemlab:echo_dust Expected: 1266 Got: 1287
-[25Nov2026 12:45:01.681] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:item: Object did not get ID it asked for. Name: barklychemlab:lumen_resin Expected: 1267 Got: 1288
-[25Nov2026 12:45:01.681] [Render thread/WARN] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry minecraft:item: Object did not get ID it asked for. Name: barklychemlab:stillwater_essence Expected: 1268 Got: 1289
-[25Nov2026 12:45:02.934] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 8 recipes
-[25Nov2026 12:45:02.995] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/dimension_survey: Expected item to be a string, was an object ({"it...t"})
-[25Nov2026 12:45:02.999] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/first_insight: Expected item to be a string, was an object ({"it...t"})
-[25Nov2026 12:45:03.009] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/experience_collection: Expected item to be a string, was an object ({"it...m"})
-[25Nov2026 12:45:03.013] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/expanded_archive: Expected item to be a string, was an object ({"it...e"})
-[25Nov2026 12:45:03.016] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/fieldwork: Expected item to be a string, was an object ({"it...k"})
-[25Nov2026 12:45:03.016] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/additive_studies: Expected item to be a string, was an object ({"it...t"})
-[25Nov2026 12:45:03.032] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/outer_ledger: Expected item to be a string, was an object ({"it...d"})
-[25Nov2026 12:45:03.034] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/calibration: Expected item to be a string, was an object ({"it...s"})
-[25Nov2026 12:45:03.040] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1271 advancements
-[25Nov2026 12:45:03.354] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[25Nov2026 12:45:03.354] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[25Nov2026 12:45:04.226] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[25Nov2026 12:45:05.796] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Nov2026 12:45:05.833] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Nov2026 12:45:05.851] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Nov2026 12:45:05.871] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Nov2026 12:45:06.237] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Nov2026 12:45:06.734] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 48%
-[25Nov2026 12:45:06.905] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2674 ms
-[25Nov2026 12:45:06.905] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[25Nov2026 12:45:07.101] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[25Nov2026 12:45:07.103] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[25Nov2026 12:45:07.256] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[25Nov2026 12:45:07.823] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[25Nov2026 12:45:07.877] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:4db4f4f3] logged in with entity id 271 at (-129.66671586401006, 75.0, -43.589137896820574)
-[25Nov2026 12:45:07.933] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[25Nov2026 12:45:08.037] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:mescaline_sun
-[25Nov2026 12:45:08.037] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:barbiturate_archive
-[25Nov2026 12:45:08.038] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:ghb_tide
-[25Nov2026 12:45:08.038] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:orbit_marble
-[25Nov2026 12:45:08.038] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:nitrous_cloud
-[25Nov2026 12:45:08.040] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:stillwater_essence
-[25Nov2026 12:45:08.040] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:lumen_bloom
-[25Nov2026 12:45:08.041] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:dxm_echo
-[25Nov2026 12:45:08.042] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:ketamine_geometry
-[25Nov2026 12:45:08.042] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:mephedrone_spark
-[25Nov2026 12:45:08.043] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:alcohol_campfire
-[25Nov2026 12:45:08.044] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:methylphenidate_clockwork
-[25Nov2026 12:45:08.044] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:benzodiazepine_lantern
-[25Nov2026 12:45:08.045] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:echo_dust
-[25Nov2026 12:45:08.045] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:echo_prism
-[25Nov2026 12:45:08.045] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:twocb_prism
-[25Nov2026 12:45:08.045] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:insight_fragment
-[25Nov2026 12:45:08.045] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:oxycodone_moon
-[25Nov2026 12:45:08.046] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:kratom_archive
-[25Nov2026 12:45:08.046] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:lumen_resin
-[25Nov2026 12:45:08.047] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:diphenhydramine_moth
-[25Nov2026 12:45:08.047] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:prism_salt
-[25Nov2026 12:45:08.048] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:pcp_mirror
-[25Nov2026 12:45:08.048] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:hush_chime
-[25Nov2026 12:45:08.048] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:warmth_crystal
-[25Nov2026 12:45:08.604] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 3 advancements
-[25Nov2026 12:45:44.306] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Nov2026 12:45:44.316] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[25Nov2026 12:45:44.332] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[25Nov2026 12:45:44.333] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[25Nov2026 12:45:58.556] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Nov2026 12:45:58.572] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[25Nov2026 12:45:58.580] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[25Nov2026 12:45:58.581] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[25Nov2026 12:45:59.005] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Nov2026 12:45:59.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[25Nov2026 12:45:59.018] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[25Nov2026 12:45:59.018] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[25Nov2026 12:45:59.670] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[25Nov2026 12:45:59.670] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[25Nov2026 12:45:59.678] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[25Nov2026 12:45:59.709] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[25Nov2026 12:45:59.710] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[25Nov2026 12:45:59.710] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[25Nov2026 12:46:00.031] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[25Nov2026 12:46:00.594] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[25Nov2026 12:46:00.596] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[25Nov2026 12:46:00.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[25Nov2026 12:46:00.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[25Nov2026 12:46:00.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[25Nov2026 12:46:00.608] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[25Nov2026 12:48:04.993] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[25Nov2026 13:10:04.295] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.28, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[25Nov2026 13:10:04.301] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.21.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[25Nov2026 13:10:04.476] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[25Nov2026 13:10:04.569] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[25Nov2026 13:10:04.851] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[25Nov2026 13:10:04.945] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/nickk/scoop/apps/gradle/current/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[25Nov2026 13:10:04.983] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 26.11.2.261112, ATI Technologies Inc.
+[25Nov2026 13:10:05.315] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.28\2f0765ea31561e9dfaf8eb8b54ac0548cd857559\javafmllanguage-1.20.1-47.4.28.jar is missing mods.toml file
+[25Nov2026 13:10:05.324] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.28\4e54a5f415a61888bd9c5d61b140ae5f86bf665f\lowcodelanguage-1.20.1-47.4.28.jar is missing mods.toml file
+[25Nov2026 13:10:05.331] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.28\4d3efb7da0466927cc5b1e4487c3d3c33ba842d0\mclanguage-1.20.1-47.4.28.jar is missing mods.toml file
+[25Nov2026 13:10:05.339] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.28\99808794b6f9f27ca527ad9db1203409fb8552f8\fmlcore-1.20.1-47.4.28.jar is missing mods.toml file
+[25Nov2026 13:10:05.433] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[25Nov2026 13:10:07.366] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\nickk\scoop\apps\gradle\current\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[25Nov2026 13:10:08.929] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[25Nov2026 13:10:12.412] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 145 milliseconds
+[25Nov2026 13:10:14.481] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/nickk/scoop/apps/gradle/current/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[25Nov2026 13:10:14.481] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/nickk/scoop/apps/gradle/current/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[25Nov2026 13:10:14.511] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[25Nov2026 13:10:14.517] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[25Nov2026 13:10:14.713] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[25Nov2026 13:10:15.072] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.28, for MC 1.20.1 with MCP 20230612.114412
+[25Nov2026 13:10:15.074] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.28 Initialized
+[25Nov2026 13:10:16.076] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[25Nov2026 13:10:16.310] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[25Nov2026 13:10:16.365] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file C:\Users\nickk\Documents\Barkly-Chem-Lab\BarklyChemLabResearch\run\config\barklychemlab-client.toml is not correct. Correcting
+[25Nov2026 13:10:16.366] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.layerEdgeTint was corrected from null to its default, true. 
+[25Nov2026 13:10:16.366] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.layerBands was corrected from null to its default, true. 
+[25Nov2026 13:10:16.366] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.layerMotifs was corrected from null to its default, true. 
+[25Nov2026 13:10:16.366] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.layerOrbits was corrected from null to its default, true. 
+[25Nov2026 13:10:16.367] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.layerParticles was corrected from null to its default, true. 
+[25Nov2026 13:10:16.367] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key experience_simulation_accessibility.maximumModifiers was corrected from null to its default, 4. 
+[25Nov2026 13:10:16.505] [Worker-Main-9/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[25Nov2026 13:10:16.680] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[25Nov2026 13:10:17.415] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.4.28 Target: null
+[25Nov2026 13:10:19.021] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[25Nov2026 13:10:19.022] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[25Nov2026 13:10:19.054] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (JBL Go 5)
+[25Nov2026 13:10:19.055] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[25Nov2026 13:10:19.179] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[25Nov2026 13:10:19.231] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[25Nov2026 13:10:19.231] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[25Nov2026 13:10:19.232] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[25Nov2026 13:10:19.232] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[25Nov2026 13:10:19.236] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[25Nov2026 13:10:19.237] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[25Nov2026 13:10:19.237] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[25Nov2026 13:10:19.237] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[25Nov2026 13:10:19.512] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[25Nov2026 13:10:19.598] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[25Nov2026 13:10:19.599] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[25Nov2026 13:10:19.600] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[25Nov2026 13:10:19.601] [Render thread/INFO] [com.barklylabs.chemlab.client.ExperienceProfileCatalog/]: ChemCraft loaded 20 client experience profiles
+[25Nov2026 13:10:19.602] [Render thread/INFO] [com.barklylabs.chemlab.client.ExperienceModifierCatalog/]: Loaded 4 ChemCraft experience modifiers
+[25Nov2026 13:10:19.783] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[25Nov2026 13:10:25.069] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 8 recipes
+[25Nov2026 13:10:25.119] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/dimension_survey: Expected item to be a string, was an object ({"it...t"})
+[25Nov2026 13:10:25.124] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/first_insight: Expected item to be a string, was an object ({"it...t"})
+[25Nov2026 13:10:25.135] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/experience_collection: Expected item to be a string, was an object ({"it...m"})
+[25Nov2026 13:10:25.139] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/expanded_archive: Expected item to be a string, was an object ({"it...e"})
+[25Nov2026 13:10:25.144] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/fieldwork: Expected item to be a string, was an object ({"it...k"})
+[25Nov2026 13:10:25.144] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/additive_studies: Expected item to be a string, was an object ({"it...t"})
+[25Nov2026 13:10:25.176] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/outer_ledger: Expected item to be a string, was an object ({"it...d"})
+[25Nov2026 13:10:25.179] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement barklychemlab:research/calibration: Expected item to be a string, was an object ({"it...s"})
+[25Nov2026 13:10:25.185] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1271 advancements
+[25Nov2026 13:10:25.589] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[25Nov2026 13:10:25.590] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[25Nov2026 13:10:26.848] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[25Nov2026 13:10:28.613] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[25Nov2026 13:10:28.669] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[25Nov2026 13:10:28.669] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[25Nov2026 13:10:28.690] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[25Nov2026 13:10:28.863] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[25Nov2026 13:10:29.373] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[25Nov2026 13:10:29.860] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 55%
+[25Nov2026 13:10:30.068] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[25Nov2026 13:10:30.070] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3214 ms
+[25Nov2026 13:10:30.258] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[25Nov2026 13:10:30.261] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[25Nov2026 13:10:30.395] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[25Nov2026 13:10:30.834] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[25Nov2026 13:10:30.935] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:5b9491c4] logged in with entity id 172 at (-91.17974124116176, 69.0, -83.5354392611455)
+[25Nov2026 13:10:30.994] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[25Nov2026 13:10:31.134] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:echo_prism
+[25Nov2026 13:10:31.136] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:hush_chime
+[25Nov2026 13:10:31.136] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:stillwater_essence
+[25Nov2026 13:10:31.137] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:mescaline_sun
+[25Nov2026 13:10:31.137] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:nitrous_cloud
+[25Nov2026 13:10:31.138] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:alcohol_campfire
+[25Nov2026 13:10:31.138] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:benzodiazepine_lantern
+[25Nov2026 13:10:31.140] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:lumen_resin
+[25Nov2026 13:10:31.140] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:barbiturate_archive
+[25Nov2026 13:10:31.141] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:prism_salt
+[25Nov2026 13:10:31.142] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:lumen_bloom
+[25Nov2026 13:10:31.142] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:oxycodone_moon
+[25Nov2026 13:10:31.142] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:twocb_prism
+[25Nov2026 13:10:31.143] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:mephedrone_spark
+[25Nov2026 13:10:31.146] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:ghb_tide
+[25Nov2026 13:10:31.147] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:orbit_marble
+[25Nov2026 13:10:31.147] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:insight_fragment
+[25Nov2026 13:10:31.149] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:echo_dust
+[25Nov2026 13:10:31.149] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:dxm_echo
+[25Nov2026 13:10:31.149] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:pcp_mirror
+[25Nov2026 13:10:31.150] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:methylphenidate_clockwork
+[25Nov2026 13:10:31.150] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:diphenhydramine_moth
+[25Nov2026 13:10:31.151] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:warmth_crystal
+[25Nov2026 13:10:31.151] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:kratom_archive
+[25Nov2026 13:10:31.151] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: barklychemlab:research/barklychemlab:ketamine_geometry
+[25Nov2026 13:10:31.562] [Render thread/INFO] [com.barklylabs.chemlab.client.ExperiencePresentationEvents/]: ChemCraft modular screen-space renderer is receiving RenderGuiOverlayEvent.Post at HOTBAR stage
+[25Nov2026 13:10:31.701] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 3 advancements
+[25Nov2026 13:10:38.081] [Render thread/INFO] [com.barklylabs.chemlab.client.ClientExperienceState/]: Started client experience layer 'pcp_mirror' for 600 ticks (profile strength 0.42, local intensity 0.8, catalog size 20)
+[25Nov2026 13:10:52.915] [Render thread/INFO] [com.barklylabs.chemlab.client.ClientExperienceState/]: Started client experience layer 'ghb_tide' for 600 ticks (profile strength 0.32, local intensity 0.8, catalog size 20)
+[25Nov2026 13:11:08.619] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[25Nov2026 13:11:08.661] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[25Nov2026 13:11:08.684] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[25Nov2026 13:11:08.686] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[25Nov2026 13:11:14.519] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[25Nov2026 13:11:14.566] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[25Nov2026 13:11:14.577] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[25Nov2026 13:11:14.579] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[25Nov2026 13:11:15.920] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[25Nov2026 13:11:15.928] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[25Nov2026 13:11:15.936] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[25Nov2026 13:11:15.937] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[25Nov2026 13:11:25.793] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[25Nov2026 13:11:25.793] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[25Nov2026 13:11:25.802] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[25Nov2026 13:11:25.820] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[25Nov2026 13:11:25.820] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[25Nov2026 13:11:25.820] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[25Nov2026 13:11:26.187] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[25Nov2026 13:11:26.851] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[25Nov2026 13:11:26.852] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[25Nov2026 13:11:26.867] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[25Nov2026 13:11:26.868] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[25Nov2026 13:11:26.868] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[25Nov2026 13:11:26.868] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[25Nov2026 13:11:28.957] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
