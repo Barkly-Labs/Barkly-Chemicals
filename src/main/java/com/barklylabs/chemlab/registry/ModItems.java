@@ -3,6 +3,7 @@ package com.barklylabs.chemlab.registry;
 import com.barklylabs.chemlab.BarklyChemLab;
 import com.barklylabs.chemlab.item.ExperienceTokenItem;
 import com.barklylabs.chemlab.item.ResearchComponentItem;
+import com.barklylabs.chemlab.item.ExperienceAdditiveItem;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.particles.ParticleTypes;
@@ -29,6 +30,12 @@ public final class ModItems {
     // Processing and research outputs
     public static final RegistryObject<Item> RESONANCE_CORE = component("resonance_core", "tooltip.barklychemlab.resonance_core", 16);
     public static final RegistryObject<Item> INSIGHT_FRAGMENT = component("insight_fragment", "tooltip.barklychemlab.insight_fragment", 64);
+
+    // Fictional presentation modifiers; they affect only the local rendering/audio layer.
+    public static final RegistryObject<Item> PRISM_SALT = additive("prism_salt");
+    public static final RegistryObject<Item> ECHO_DUST = additive("echo_dust");
+    public static final RegistryObject<Item> LUMEN_RESIN = additive("lumen_resin");
+    public static final RegistryObject<Item> STILLWATER_ESSENCE = additive("stillwater_essence");
 
     // Reusable, non-consumable fantasy experience tokens. Use is cooldown-limited and configurable.
     public static final RegistryObject<Item> LUMEN_BLOOM = profile("lumen_bloom", MobEffects.NIGHT_VISION, "lumen", 30, ParticleTypes.WAX_ON);
@@ -58,8 +65,11 @@ public final class ModItems {
     private static RegistryObject<Item> component(String id, String tooltip, int stackSize) {
         return ITEMS.register(id, () -> new ResearchComponentItem(new Item.Properties().stacksTo(stackSize), tooltip));
     }
+    private static RegistryObject<Item> additive(String id) {
+        return ITEMS.register(id, () -> new ExperienceAdditiveItem(id, new Item.Properties().stacksTo(16)));
+    }
     private static RegistryObject<Item> profile(String id, MobEffect effect, String messageSuffix, int durationScale, net.minecraft.core.particles.ParticleOptions particles) {
-        return ITEMS.register(id, () -> new ExperienceTokenItem(new Item.Properties().stacksTo(1), effect, "message.barklychemlab." + messageSuffix, durationScale, particles));
+        return ITEMS.register(id, () -> new ExperienceTokenItem(new Item.Properties().stacksTo(1), id, effect, "message.barklychemlab." + messageSuffix, durationScale, particles));
     }
     private ModItems() { }
 }

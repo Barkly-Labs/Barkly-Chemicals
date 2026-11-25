@@ -1,0 +1,22 @@
+{
+  "id": "mescaline_sun",
+  "rationale": "DEA Peyote and Mescaline Drug Fact Sheet (2024) describes variable illusions and altered space/time/body perception.",
+  "reference": "https://www.dea.gov/sites/default/files/2025-01/Peyote-and-Mescaline-Drug-Fact-Sheet.pdf",
+  "color": "#e7aa54",
+  "strength": 0.54,
+  "trail": 0.3,
+  "fringe": 0.2,
+  "warp": 0.32,
+  "camera_sway": 0,
+  "camera_roll": 0.02,
+  "movement": 0.1,
+  "muffle": 0,
+  "echo": 0.08,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.42,
+  "pattern": "sunburst",
+  "onset_ticks": 120,
+  "peak_ticks": 360,
+  "recovery_ticks": 360
+}

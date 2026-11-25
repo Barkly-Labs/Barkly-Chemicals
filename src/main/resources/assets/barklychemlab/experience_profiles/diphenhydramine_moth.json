@@ -1,0 +1,22 @@
+{
+  "id": "diphenhydramine_moth",
+  "rationale": "MedlinePlus Diphenhydramine Overdose entry reports confusion, drowsiness, unsteadiness and hallucinations in overdose; hallucinations are not presented as a typical effect.",
+  "reference": "https://medlineplus.gov/ency/article/002636.htm",
+  "color": "#d79a5e",
+  "strength": 0.34,
+  "trail": 0.32,
+  "fringe": 0.08,
+  "warp": 0.13,
+  "camera_sway": 0,
+  "camera_roll": 0.02,
+  "movement": 0.08,
+  "muffle": 0.08,
+  "echo": 0.06,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.28,
+  "pattern": "moth",
+  "onset_ticks": 90,
+  "peak_ticks": 260,
+  "recovery_ticks": 300
+}

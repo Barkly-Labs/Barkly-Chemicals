@@ -1,6 +1,6 @@
 # ChemCraft texture mapping and visual references
 
-All 30 registered item textures are distinct 16×16 transparent PNGs. Each item model under `assets/barklychemlab/models/item/` points to the matching `assets/barklychemlab/textures/item/<registry_id>.png`. The art was generated as individual item icons, then reduced with nearest-neighbor sampling to preserve hard pixel edges.
+All 34 registered item textures are distinct 16×16 transparent PNGs. Each item model under `assets/barklychemlab/models/item/` points to the matching `assets/barklychemlab/textures/item/<registry_id>.png`. The art was generated as individual item icons, then reduced with nearest-neighbor sampling to preserve hard pixel edges.
 
 ## Substance items
 
@@ -48,6 +48,15 @@ The physical forms below are visual references, not chemical identification. Pro
 | `orbit_marble` | Orbit Marble | `orbit_marble.png` | Dark navy glass marble with a crescent galaxy swirl and star flecks. |
 | `hush_chime` | Hush Chime | `hush_chime.png` | Small bronze hand chime with a loop handle. |
 | `warmth_crystal` | Warmth Crystal | `warmth_crystal.png` | Amber-orange faceted mineral cluster with warm golden highlights. |
+
+## Experience modifiers
+
+| Registry ID | Display name | Texture | Visual reference and rationale |
+|---|---|---|---|
+| `prism_salt` | Prism Salt | `prism_salt.png` | Violet faceted crystal with a bright lavender plane, rendered as a Minecraft shard. |
+| `echo_dust` | Echo Dust | `echo_dust.png` | Sparse cyan-blue flecks with highlight pixels, using a powder/granule silhouette. |
+| `lumen_resin` | Lumen Resin | `lumen_resin.png` | Amber-green irregular resin nugget with glossy highlight pixels. |
+| `stillwater_essence` | Stillwater Essence | `stillwater_essence.png` | Teal liquid in a compact stoppered lab vial. |
 
 ## Workbench block item
 

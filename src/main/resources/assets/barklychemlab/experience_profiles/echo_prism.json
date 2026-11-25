@@ -1,0 +1,22 @@
+{
+  "id": "echo_prism",
+  "rationale": "A fictional resonance profile: violet edge echoes and a restrained spatial ripple.",
+  "reference": "Original fantasy artifact; no pharmacology claim.",
+  "color": "#a983eb",
+  "strength": 0.48,
+  "trail": 0.54,
+  "fringe": 0.25,
+  "warp": 0.26,
+  "camera_sway": 0,
+  "camera_roll": 0.04,
+  "movement": 0.12,
+  "muffle": 0.05,
+  "echo": 0.34,
+  "pan": 0.08,
+  "pitch": 0.01,
+  "hud": 0.4,
+  "pattern": "echo",
+  "onset_ticks": 70,
+  "peak_ticks": 220,
+  "recovery_ticks": 280
+}

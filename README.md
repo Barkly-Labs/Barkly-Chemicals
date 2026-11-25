@@ -30,7 +30,7 @@ The workbench inventory and in-progress work are saved with the block entity. Pr
 
 ## Item ecosystem
 
-The mod registers 30 items and one block. Each item has a registry ID, English name, inventory texture, tooltip, stack limit, recipe use, and creative-tab placement. JEI displays the registered items and the custom workbench recipes.
+The mod registers 34 items and one block. Each item has a registry ID, English name, inventory texture, tooltip, stack limit, recipe use, and creative-tab placement. JEI displays the registered items and the custom workbench recipes.
 
 - **Equipment and records:** Field Notebook, Sample Vial, Calibration Lens.
 - **Exploration and botanical materials:** Echo Shard, Lunar Glass, Sky Silk, Prism Pollen, Star Petals.
@@ -39,15 +39,17 @@ The mod registers 30 items and one block. Each item has a registry ID, English n
 - **Additional uncovered-category profiles:** Kratom, Dextromethorphan (DXM), Ketamine, Nitrous Oxide, Mescaline, 2C-B, Mephedrone, GHB, Benzodiazepine, Barbiturate, Oxycodone, Diphenhydramine, Alcohol, PCP, and Methylphenidate. Their names use the actual category/substance names; effects, recipes, and messages remain fictional Minecraft content.
 - **Equipment:** Research Workbench.
 
-The additional profiles are fictional Minecraft artifacts. Their short vanilla effects and playful messages do not claim to represent real substances.
+The named profile artifacts keep their existing vanilla game-effect behavior and add a separate, client-side presentation layer. The profile presentation is fictional and does not claim clinical accuracy.
 
 ### Texture atlas and references
 
 Every registered item has its own generated 16×16 pixel-art texture. The 15 named substance items use physical-form references such as dried leaves, tablets, capsules, crystalline powders, clear liquid, and a gas cylinder; the other items have distinct laboratory or fictional-material silhouettes. See [TEXTURE_MAPPING.md](TEXTURE_MAPPING.md) for the complete registry-to-file mapping and the visual reference rationale for each item.
 
-## Configuration and accessibility
+## Experience simulation and accessibility
 
-After first launch, edit `config/barklychemlab-common.toml`:
+Using a profile item applies its existing server-side Minecraft effect and starts a separate local experience presentation profile. Each item has a distinct JSON profile. Four craftable fictional additives (Prism Salt, Echo Dust, Lumen Resin, Stillwater Essence) modify active presentation channels for a limited time. Additives require an active profile and are consumed outside creative mode. The effect layer is local to each player; it does not replicate subjective effects to others. See [EXPERIENCE_SIMULATION.md](EXPERIENCE_SIMULATION.md) for each substance's evidence record, the research-to-effect mapping, and technical limits.
+
+Client accessibility settings are stored in `config/barklychemlab-client.toml`; common progression settings remain in `config/barklychemlab-common.toml`.
 
 - `fictional_experiences.enabled`: enable or disable the status effects on profile artifacts.
 - `fictional_experiences.durationTicks`: shared profile duration setting, 20–6000 ticks.
@@ -55,8 +57,9 @@ After first launch, edit `config/barklychemlab-common.toml`:
 - `accessibility.advancementReactions`: enable or disable achievement reactions.
 - `accessibility.reactionSounds`: enable or disable the quiet chime (off by default).
 - `accessibility.profileParticles`: enable or disable decorative particles.
+- Client `experience_simulation_accessibility`: master, visual, camera, audio and HUD toggles; reduced motion; trails/chromatic fringe; intensity and transition scaling; and immediate reset (default F8, rebindable in Controls). Camera and audio effects are disabled by default.
 
-There are no shaders, camera distortions, or forced audio effects. The vanilla status effects, durations, particles, and achievement sounds can be reduced or disabled.
+The presentation modules use Forge overlay, camera-angle and sound-instance hooks. They do not alter player input, movement speed, or other players' views.
 
 ## Progression, challenges, and reactions
 
@@ -88,4 +91,4 @@ Add a message pool in `event/AdvancementReactions.java` keyed by the advancement
 
 `EXISTING_MOD_AUDIT.md` records the actual pack versions, localized content and overlap decisions. The mod intentionally does not duplicate the pack's existing cannabis, LSD, DMT, mushroom, salvia, cocaine, methamphetamine, MDMA, heroin, morphine, fentanyl, nicotine/tobacco, or Benadryl items. It also does not attempt to represent every candidate with real-substance items; uncovered categories are represented as abstract research profiles.
 
-The profile effects are short vanilla status effects rather than custom shaders, camera changes, ambient soundscapes, or environmental hallucinations. There are no direct Create or Ad Astra item dependencies; dimension progression uses vanilla Nether/End travel to remain compatible if those optional mods change. Full client/server multiplayer runtime testing still requires launching the built mod inside a Minecraft instance.
+The profile layer combines GUI patterns, screen-edge geometry, trails, optional camera-angle feedback and optional sound attenuation/echo. It is not a full-scene post-processing shader or true frequency-domain audio filter; the limits and runtime test status are documented in [EXPERIENCE_SIMULATION.md](EXPERIENCE_SIMULATION.md). There are no direct Create or Ad Astra item dependencies; dimension progression uses vanilla Nether/End travel to remain compatible if those optional mods change. Full client/server multiplayer runtime testing still requires launching the built mod inside a Minecraft instance.

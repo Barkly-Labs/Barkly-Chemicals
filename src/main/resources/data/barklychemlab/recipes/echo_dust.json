@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "barklychemlab:echo_shard"
+  },
+  "second": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "item": "barklychemlab:echo_dust",
+    "count": 1
+  },
+  "work": 180
+}

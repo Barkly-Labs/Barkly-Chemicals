@@ -1,0 +1,22 @@
+{
+  "id": "lumen_bloom",
+  "rationale": "A fictional luminous calm: pale green tint, gentle clarity pulse, no camera or audio effect.",
+  "reference": "Original fantasy artifact; no pharmacology claim.",
+  "color": "#a8e8a5",
+  "strength": 0.35,
+  "trail": 0.12,
+  "fringe": 0.03,
+  "warp": 0.08,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.08,
+  "muffle": 0,
+  "echo": 0,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.22,
+  "pattern": "bloom",
+  "onset_ticks": 90,
+  "peak_ticks": 260,
+  "recovery_ticks": 220
+}

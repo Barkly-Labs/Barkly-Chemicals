@@ -1,0 +1,22 @@
+{
+  "id": "hush_chime",
+  "rationale": "A fictional quieting profile: cool muted edges and very soft sound attenuation.",
+  "reference": "Original fantasy artifact; no pharmacology claim.",
+  "color": "#8abac8",
+  "strength": 0.34,
+  "trail": 0.08,
+  "fringe": 0,
+  "warp": 0.04,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.1,
+  "muffle": 0.32,
+  "echo": 0.1,
+  "pan": 0,
+  "pitch": -0.03,
+  "hud": 0.28,
+  "pattern": "chime",
+  "onset_ticks": 100,
+  "peak_ticks": 280,
+  "recovery_ticks": 260
+}

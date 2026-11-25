@@ -1,0 +1,22 @@
+{
+  "id": "methylphenidate_clockwork",
+  "rationale": "MedlinePlus Methylphenidate information identifies it as a CNS stimulant and lists nervousness/restlessness and visual or mood changes among possible effects; game uses a steady focus motif, not enhanced performance.",
+  "reference": "https://medlineplus.gov/druginfo/meds/a682188.html",
+  "color": "#e5ba54",
+  "strength": 0.28,
+  "trail": 0.06,
+  "fringe": 0.03,
+  "warp": 0.02,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.08,
+  "muffle": 0,
+  "echo": 0,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.23,
+  "pattern": "clock",
+  "onset_ticks": 60,
+  "peak_ticks": 220,
+  "recovery_ticks": 240
+}

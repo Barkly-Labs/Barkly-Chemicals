@@ -1,0 +1,22 @@
+{
+  "id": "alcohol_campfire",
+  "rationale": "NIAAA Alcohol and the Brain explains effects on balance, memory, speech and judgment; game uses an optional low-frequency warm horizon cue only.",
+  "reference": "https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics/health-topics-alcohol-and-brain",
+  "color": "#d9904f",
+  "strength": 0.34,
+  "trail": 0.1,
+  "fringe": 0.03,
+  "warp": 0.08,
+  "camera_sway": 0.1,
+  "camera_roll": 0.08,
+  "movement": 0.16,
+  "muffle": 0.08,
+  "echo": 0.04,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.28,
+  "pattern": "ember",
+  "onset_ticks": 70,
+  "peak_ticks": 240,
+  "recovery_ticks": 280
+}

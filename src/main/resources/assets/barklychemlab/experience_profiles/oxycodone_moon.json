@@ -1,0 +1,22 @@
+{
+  "id": "oxycodone_moon",
+  "rationale": "DEA Oxycodone Drug Fact Sheet reports sedation and drowsiness among effects; the visual cue is non-clinical and does not model analgesia or euphoria.",
+  "reference": "https://www.dea.gov/factsheets/oxycodone",
+  "color": "#7788b8",
+  "strength": 0.26,
+  "trail": 0.04,
+  "fringe": 0,
+  "warp": 0.04,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.04,
+  "muffle": 0.12,
+  "echo": 0.03,
+  "pan": 0,
+  "pitch": -0.01,
+  "hud": 0.2,
+  "pattern": "moon",
+  "onset_ticks": 90,
+  "peak_ticks": 280,
+  "recovery_ticks": 280
+}

@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "minecraft:honeycomb"
+  },
+  "second": {
+    "item": "barklychemlab:star_petals"
+  },
+  "result": {
+    "item": "barklychemlab:lumen_resin",
+    "count": 1
+  },
+  "work": 200
+}

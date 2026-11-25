@@ -1,0 +1,22 @@
+{
+  "id": "twocb_prism",
+  "rationale": "Hansen et al., Assessment of the Acute Effects of 2C-B vs. Psilocybin on Subjective Experience, Mood, and Cognition (2023); small controlled study reports psychedelic-type altered consciousness and auditory alterations; evidence is limited.",
+  "reference": "https://pubmed.ncbi.nlm.nih.gov/37253161/",
+  "color": "#dc8adf",
+  "strength": 0.48,
+  "trail": 0.24,
+  "fringe": 0.24,
+  "warp": 0.28,
+  "camera_sway": 0,
+  "camera_roll": 0.02,
+  "movement": 0.08,
+  "muffle": 0,
+  "echo": 0.06,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.38,
+  "pattern": "prism",
+  "onset_ticks": 100,
+  "peak_ticks": 320,
+  "recovery_ticks": 320
+}

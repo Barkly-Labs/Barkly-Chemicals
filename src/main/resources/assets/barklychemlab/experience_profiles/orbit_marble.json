@@ -1,0 +1,22 @@
+{
+  "id": "orbit_marble",
+  "rationale": "A fictional weightless perception: blue halo and slow orbital edge marks.",
+  "reference": "Original fantasy artifact; no pharmacology claim.",
+  "color": "#7fc9f0",
+  "strength": 0.42,
+  "trail": 0.22,
+  "fringe": 0.06,
+  "warp": 0.3,
+  "camera_sway": 0.03,
+  "camera_roll": 0.1,
+  "movement": 0.25,
+  "muffle": 0,
+  "echo": 0.1,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.35,
+  "pattern": "orbit",
+  "onset_ticks": 100,
+  "peak_ticks": 300,
+  "recovery_ticks": 260
+}

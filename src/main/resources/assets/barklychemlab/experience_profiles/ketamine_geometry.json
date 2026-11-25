@@ -1,0 +1,22 @@
+{
+  "id": "ketamine_geometry",
+  "rationale": "DEA Ketamine Drug Fact Sheet reports distorted sight and sound and feelings of disconnection.",
+  "reference": "https://www.dea.gov/sites/default/files/2020-06/Ketamine-2020.pdf",
+  "color": "#81b6c9",
+  "strength": 0.46,
+  "trail": 0.18,
+  "fringe": 0.1,
+  "warp": 0.42,
+  "camera_sway": 0.02,
+  "camera_roll": 0.04,
+  "movement": 0.12,
+  "muffle": 0.12,
+  "echo": 0.16,
+  "pan": 0.04,
+  "pitch": 0,
+  "hud": 0.34,
+  "pattern": "facets",
+  "onset_ticks": 90,
+  "peak_ticks": 260,
+  "recovery_ticks": 300
+}

@@ -1,0 +1,107 @@
+{
+  "parent": "barklychemlab:research/first_insight",
+  "display": {
+    "icon": {
+      "item": "barklychemlab:prism_salt"
+    },
+    "title": {
+      "translate": "advancement.barklychemlab.additives.title"
+    },
+    "description": {
+      "translate": "advancement.barklychemlab.additives.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "recipe_0": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "barklychemlab:prism_salt"
+      }
+    },
+    "recipe_1": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "barklychemlab:echo_dust"
+      }
+    },
+    "recipe_2": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "barklychemlab:lumen_resin"
+      }
+    },
+    "recipe_3": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "barklychemlab:stillwater_essence"
+      }
+    },
+    "additive_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:prism_salt"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "additive_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:echo_dust"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "additive_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:lumen_resin"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "additive_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              {
+                "item": "barklychemlab:stillwater_essence"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "recipe_0",
+      "recipe_1",
+      "recipe_2",
+      "recipe_3"
+    ]
+  ]
+}

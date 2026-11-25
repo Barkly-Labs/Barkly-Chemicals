@@ -27,6 +27,10 @@ public final class ModCreativeTabs {
                 // Intermediate research materials and profile artifacts
                 output.accept(ModItems.RESONANCE_CORE.get());
                 output.accept(ModItems.INSIGHT_FRAGMENT.get());
+                output.accept(ModItems.PRISM_SALT.get());
+                output.accept(ModItems.ECHO_DUST.get());
+                output.accept(ModItems.LUMEN_RESIN.get());
+                output.accept(ModItems.STILLWATER_ESSENCE.get());
                 output.accept(ModItems.LUMEN_BLOOM.get());
                 output.accept(ModItems.ECHO_PRISM.get());
                 output.accept(ModItems.ORBIT_MARBLE.get());

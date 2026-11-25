@@ -7,6 +7,7 @@ import com.barklylabs.chemlab.registry.ModBlockEntities;
 import com.barklylabs.chemlab.registry.ModMenus;
 import com.barklylabs.chemlab.recipe.ModRecipes;
 import com.barklylabs.chemlab.registry.ModItems;
+import com.barklylabs.chemlab.network.ChemLabNetwork;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -29,6 +30,8 @@ public final class BarklyChemLab {
         ModRecipes.TYPES.register(bus);
         ModRecipes.SERIALIZERS.register(bus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ChemLabConfig.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ChemLabConfig.CLIENT_SPEC, "barklychemlab-client.toml");
+        ChemLabNetwork.register();
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
