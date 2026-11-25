@@ -1,0 +1,22 @@
+{
+  "id": "kratom_archive",
+  "rationale": "DEA Kratom Drug Fact Sheet (2025) summarizes mixed stimulant/sedative reports and variability by amount.",
+  "reference": "https://www.dea.gov/factsheets/kratom",
+  "color": "#76bc78",
+  "strength": 0.3,
+  "trail": 0.12,
+  "fringe": 0.02,
+  "warp": 0.06,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.05,
+  "muffle": 0.04,
+  "echo": 0,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.22,
+  "pattern": "leaf",
+  "onset_ticks": 100,
+  "peak_ticks": 300,
+  "recovery_ticks": 240
+}

@@ -1,0 +1,22 @@
+{
+  "id": "benzodiazepine_lantern",
+  "rationale": "DEA Benzodiazepines Drug Fact Sheet (2024) notes CNS slowing, sleepiness, amnesia and impaired coordination; the profile only uses subdued visual feedback.",
+  "reference": "https://www.dea.gov/sites/default/files/2025-01/Benzodiazepines-2024-Drug-Fact-Sheet.pdf",
+  "color": "#8299be",
+  "strength": 0.3,
+  "trail": 0.08,
+  "fringe": 0.02,
+  "warp": 0.06,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.1,
+  "muffle": 0.18,
+  "echo": 0.03,
+  "pan": 0,
+  "pitch": -0.02,
+  "hud": 0.25,
+  "pattern": "lantern",
+  "onset_ticks": 90,
+  "peak_ticks": 280,
+  "recovery_ticks": 300
+}

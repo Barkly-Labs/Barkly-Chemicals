@@ -1,0 +1,22 @@
+{
+  "id": "nitrous_cloud",
+  "rationale": "DEA Inhalants Drug Fact Sheet (2024) covers cognitive, movement, vision and hearing effects across inhalants; it is not nitrous-specific, so this profile is a broad fictional abstraction.",
+  "reference": "https://www.dea.gov/sites/default/files/2025-01/Inhalants-Drug-Fact-Sheet.pdf",
+  "color": "#a9d9e8",
+  "strength": 0.36,
+  "trail": 0.16,
+  "fringe": 0.04,
+  "warp": 0.12,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.08,
+  "muffle": 0.12,
+  "echo": 0.07,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.25,
+  "pattern": "cloud",
+  "onset_ticks": 60,
+  "peak_ticks": 180,
+  "recovery_ticks": 220
+}

@@ -1,0 +1,22 @@
+{
+  "id": "warmth_crystal",
+  "rationale": "A fictional reassuring warmth: amber edge light and steady soft contrast.",
+  "reference": "Original fantasy artifact; no pharmacology claim.",
+  "color": "#f3b45f",
+  "strength": 0.32,
+  "trail": 0.05,
+  "fringe": 0.02,
+  "warp": 0.04,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.04,
+  "muffle": 0,
+  "echo": 0,
+  "pan": 0,
+  "pitch": 0,
+  "hud": 0.22,
+  "pattern": "warmth",
+  "onset_ticks": 100,
+  "peak_ticks": 300,
+  "recovery_ticks": 240
+}

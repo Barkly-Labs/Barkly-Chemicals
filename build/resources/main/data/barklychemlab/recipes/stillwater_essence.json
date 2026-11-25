@@ -1,0 +1,14 @@
+{
+  "type": "barklychemlab:research",
+  "first": {
+    "item": "minecraft:lapis_lazuli"
+  },
+  "second": {
+    "item": "barklychemlab:sky_silk"
+  },
+  "result": {
+    "item": "barklychemlab:stillwater_essence",
+    "count": 1
+  },
+  "work": 220
+}

@@ -33,3 +33,10 @@
 
 - Build command for this revision: `gradle clean build --no-daemon --offline`; succeeded. Gradle emitted an asset-index network warning because the build environment blocks the ForgeGradle metadata request, but cached dependencies allowed compilation, resource processing, and reobfuscation to complete.
 - Gradle reports `test NO-SOURCE`; no automated behavioral tests are present. Runtime visual quality, actual sound echo playback and client-server game sessions remain unverified.
+
+## Screen-space rendering investigation
+
+- Traced the item-use packet through the client profile state and Forge overlay callback; added logging for catalog loads, activation/intensity, hook invocation, and active profile drawing.
+- Checked Forge 47.4.28 mapped API signatures for `RenderGuiOverlayEvent.Post`, `VanillaGuiOverlay.HOTBAR`, and `RegisterClientReloadListenersEvent`.
+- Found no shader registration, GLSL resources, or custom framebuffer code in the implementation. The current renderer is a GUI overlay.
+- `runClient --offline` could not launch: ForgeGradle failed at `downloadMCMeta` with `Network is unreachable`; no game logs or visual observation were available. Do not treat rendering as in-game verified. See `EXPERIENCE_RENDER_DIAGNOSTIC.md`.

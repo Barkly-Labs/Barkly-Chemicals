@@ -1,0 +1,22 @@
+{
+  "id": "pcp_mirror",
+  "rationale": "MedlinePlus PCP information describes dissociation from surroundings, perception changes and loss of coordination; the game uses non-obscuring geometry.",
+  "reference": "https://medlineplus.gov/ency/patientinstructions/000797.htm",
+  "color": "#7493c8",
+  "strength": 0.42,
+  "trail": 0.34,
+  "fringe": 0.12,
+  "warp": 0.34,
+  "camera_sway": 0.01,
+  "camera_roll": 0.03,
+  "movement": 0.12,
+  "muffle": 0.1,
+  "echo": 0.2,
+  "pan": 0.04,
+  "pitch": 0,
+  "hud": 0.34,
+  "pattern": "mirror",
+  "onset_ticks": 90,
+  "peak_ticks": 260,
+  "recovery_ticks": 320
+}

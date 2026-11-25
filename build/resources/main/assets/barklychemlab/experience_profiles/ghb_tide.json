@@ -1,0 +1,22 @@
+{
+  "id": "ghb_tide",
+  "rationale": "DEA GHB Drug Fact Sheet (2025) reports depressant effects, drowsiness, confusion and memory impairment, with variable other effects.",
+  "reference": "https://www.dea.gov/factsheets/ghb-gamma-hydroxybutyric-acid",
+  "color": "#5eabc0",
+  "strength": 0.32,
+  "trail": 0.05,
+  "fringe": 0,
+  "warp": 0.06,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.08,
+  "muffle": 0.22,
+  "echo": 0.08,
+  "pan": 0,
+  "pitch": -0.02,
+  "hud": 0.28,
+  "pattern": "tide",
+  "onset_ticks": 80,
+  "peak_ticks": 250,
+  "recovery_ticks": 260
+}

@@ -47,7 +47,7 @@ Every registered item has its own generated 16×16 pixel-art texture. The 15 nam
 
 ## Experience simulation and accessibility
 
-Using a profile item applies its existing server-side Minecraft effect and starts a separate local experience presentation profile. Each item has a distinct JSON profile. Four craftable fictional additives (Prism Salt, Echo Dust, Lumen Resin, Stillwater Essence) modify active presentation channels for a limited time. Additives require an active profile and are consumed outside creative mode. The effect layer is local to each player; it does not replicate subjective effects to others. See [EXPERIENCE_SIMULATION.md](EXPERIENCE_SIMULATION.md) for each substance's evidence record, the research-to-effect mapping, and technical limits.
+Using a profile item applies its existing server-side Minecraft effect and starts a separate local experience presentation profile. Each item has a distinct JSON profile. Four craftable fictional additives (Prism Salt, Echo Dust, Lumen Resin, Stillwater Essence) modify active presentation channels for a limited time. Additives require an active profile and are consumed outside creative mode. The effect layer is local to each player; it does not replicate subjective effects to others. See [EXPERIENCE_SIMULATION.md](EXPERIENCE_SIMULATION.md) for each substance's evidence record, the research-to-effect mapping, and technical limits. See [EXPERIENCE_RENDER_DIAGNOSTIC.md](EXPERIENCE_RENDER_DIAGNOSTIC.md) for the rendering-pipeline trace, root-cause findings, code changes, and runtime verification status.
 
 Client accessibility settings are stored in `config/barklychemlab-client.toml`; common progression settings remain in `config/barklychemlab-common.toml`.
 

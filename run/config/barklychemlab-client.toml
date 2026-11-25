@@ -1,0 +1,29 @@
+
+[experience_simulation_accessibility]
+	#Master switch for the local fictional perception simulation.
+	enabled = true
+	#Enable the low-intensity tint, geometric overlays, and visual layering.
+	visualEffects = true
+	#Enable very small camera angle feedback. Off by default.
+	cameraEffects = false
+	#Reduce animated overlays and disable all simulated camera motion.
+	reduceMotion = false
+	#Enable low-density edge trails and ghost layers.
+	visualTrails = true
+	#Enable restrained colored edge separation cues.
+	chromaticFringe = true
+	#Enable quiet attenuation, slight pitch filtering, spatial bias, and occasional soft echoes. Music and UI sounds are excluded.
+	audioEffects = false
+	#Show small profile and recovery feedback away from essential controls.
+	hudFeedback = true
+	#Prevent rapid brightness/color changes; all profile animation is slow when enabled.
+	preventFlashing = true
+	#Allow the configurable Clear Experience key to immediately remove all local presentation effects.
+	instantReset = true
+	#Maximum local visual/audio presentation intensity; 0 disables the presentation layer.
+	#Range: 0.0 ~ 1.0
+	intensity = 0.8
+	#Scale onset and recovery transition length; higher values are slower.
+	#Range: 0.25 ~ 4.0
+	transitionScale = 1.0
+

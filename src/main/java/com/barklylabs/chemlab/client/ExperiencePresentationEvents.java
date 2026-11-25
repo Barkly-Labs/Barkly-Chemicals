@@ -2,6 +2,7 @@ package com.barklylabs.chemlab.client;
 
 import com.barklylabs.chemlab.BarklyChemLab;
 import com.barklylabs.chemlab.config.ChemLabConfig;
+import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
@@ -11,9 +12,15 @@ import net.minecraftforge.client.event.ScreenEvent;
 import net.minecraftforge.client.event.ViewportEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.slf4j.Logger;
+import java.util.HashSet;
+import java.util.Set;
 
 @Mod.EventBusSubscriber(modid = BarklyChemLab.MOD_ID, value = Dist.CLIENT)
 public final class ExperiencePresentationEvents {
+    private static final Logger LOGGER = LogUtils.getLogger();
+    private static boolean renderHookSeen;
+    private static final Set<String> RENDERED_PROFILES = new HashSet<>();
     @SubscribeEvent public static void camera(ViewportEvent.ComputeCameraAngles event) {
         if (!ChemLabConfig.CLIENT_CAMERA_EFFECTS.get() || ChemLabConfig.CLIENT_REDUCE_MOTION.get()) return;
         Minecraft mc = Minecraft.getInstance();
@@ -25,7 +32,11 @@ public final class ExperiencePresentationEvents {
     }
 
     @SubscribeEvent public static void overlay(RenderGuiOverlayEvent.Post event) {
-        if (!event.getOverlay().equals(VanillaGuiOverlay.CROSSHAIR.type())) return;
+        if (!event.getOverlay().equals(VanillaGuiOverlay.HOTBAR.type())) return;
+        if (!renderHookSeen) {
+            renderHookSeen = true;
+            LOGGER.info("ChemCraft screen-space overlay hook is receiving Forge RenderGuiOverlayEvent.Post at HOTBAR stage");
+        }
         if (!ChemLabConfig.CLIENT_VISUAL_EFFECTS.get()) return;
         draw(event.getGuiGraphics(), false);
     }
@@ -38,19 +49,28 @@ public final class ExperiencePresentationEvents {
     private static void draw(GuiGraphics graphics, boolean menu) {
         var layers = ClientExperienceState.layers();
         if (layers.isEmpty()) return;
+        for (ClientExperienceState.Layer layer : layers) {
+            if (RENDERED_PROFILES.add(layer.profile().id())) LOGGER.info("Rendering screen-space profile '{}' at intensity {}", layer.profile().id(), layer.intensity());
+        }
         int width = Minecraft.getInstance().getWindow().getGuiScaledWidth();
         int height = Minecraft.getInstance().getWindow().getGuiScaledHeight();
         int rgb = ClientExperienceState.blendedColor();
         float intensity = ClientExperienceState.combined("strength", p -> p.strength());
-        int alpha = Math.max(0, Math.min(menu ? 34 : 88, Math.round((menu ? 24 : 72) * intensity)));
-        if (alpha > 0) {
+        // Four nested translucent bands make the world-space frame perceptible at
+        // normal GUI scale while remaining outside the center and hotbar controls.
+        int[] bandWidths = {24, 16, 8, 3};
+        float[] bandWeights = {0.16f, 0.22f, 0.28f, 0.34f};
+        int maxBandAlpha = menu ? 58 : 118;
+        for (int i = 0; i < bandWidths.length; i++) {
+            int alpha = Math.max(0, Math.min(maxBandAlpha, Math.round(maxBandAlpha * intensity * bandWeights[i])));
+            if (alpha == 0) continue;
+            int band = bandWidths[i];
             int color = (alpha << 24) | rgb;
-            // Thin edge tint leaves the center view and all essential UI readable.
-            graphics.fill(0, 0, width, 2, color);
-            graphics.fill(0, height - 2, width, height, color);
+            graphics.fill(0, 0, width, band, color);
+            graphics.fill(0, height - band, width, height, color);
             if (!menu) {
-                graphics.fill(0, 0, 2, height, color);
-                graphics.fill(width - 2, 0, width, height, color);
+                graphics.fill(0, 0, band, height, color);
+                graphics.fill(width - band, 0, width, height, color);
             }
         }
         if (!menu) {
@@ -100,7 +120,7 @@ public final class ExperiencePresentationEvents {
     }
 
     private static void drawPattern(GuiGraphics g, ExperienceProfile profile, int width, int height, float power) {
-        int alpha = Math.max(0, Math.min(76, Math.round(64 * power * profile.hud())));
+        int alpha = Math.max(0, Math.min(112, Math.round(112 * power * profile.hud())));
         if (alpha < 3) return;
         int c = (alpha << 24) | profile.color();
         int x = 8, y = 18;

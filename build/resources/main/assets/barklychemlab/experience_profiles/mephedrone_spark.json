@@ -1,0 +1,22 @@
+{
+  "id": "mephedrone_spark",
+  "rationale": "Papaseit et al., Abuse Potential of Cathinones in Humans: A Systematic Review (2022); evidence suggests stimulant/euphorigenic effects but human evidence is limited and heterogeneous.",
+  "reference": "https://pubmed.ncbi.nlm.nih.gov/35207278/",
+  "color": "#efae55",
+  "strength": 0.34,
+  "trail": 0.12,
+  "fringe": 0.06,
+  "warp": 0.05,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.1,
+  "muffle": 0,
+  "echo": 0,
+  "pan": 0,
+  "pitch": 0.01,
+  "hud": 0.28,
+  "pattern": "spark",
+  "onset_ticks": 60,
+  "peak_ticks": 200,
+  "recovery_ticks": 250
+}

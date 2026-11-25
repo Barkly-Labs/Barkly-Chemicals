@@ -1,0 +1,22 @@
+{
+  "id": "barbiturate_archive",
+  "rationale": "DEA Barbiturates Drug Fact Sheet (2024) notes sleepiness and, at higher toxicity, memory/judgment/coordination impairment; only a muted archive motif is represented.",
+  "reference": "https://www.dea.gov/sites/default/files/2025-01/Barbiturates-2024-Drug-Fact-Sheet.pdf",
+  "color": "#9a917c",
+  "strength": 0.28,
+  "trail": 0.04,
+  "fringe": 0,
+  "warp": 0.03,
+  "camera_sway": 0,
+  "camera_roll": 0,
+  "movement": 0.06,
+  "muffle": 0.2,
+  "echo": 0.04,
+  "pan": 0,
+  "pitch": -0.02,
+  "hud": 0.22,
+  "pattern": "archive",
+  "onset_ticks": 100,
+  "peak_ticks": 300,
+  "recovery_ticks": 300
+}

@@ -1,0 +1,22 @@
+{
+  "id": "dxm_echo",
+  "rationale": "DEA DXM Drug Fact Sheet (2024) reports sensory changes and variable perceptual effects in misuse; the game profile is a restrained abstract echo cue.",
+  "reference": "https://www.dea.gov/sites/default/files/2025-01/DXM-2024-Drug-Fact-Sheet.pdf",
+  "color": "#7b9bea",
+  "strength": 0.48,
+  "trail": 0.48,
+  "fringe": 0.16,
+  "warp": 0.22,
+  "camera_sway": 0.02,
+  "camera_roll": 0.03,
+  "movement": 0.15,
+  "muffle": 0.05,
+  "echo": 0.28,
+  "pan": 0.02,
+  "pitch": 0,
+  "hud": 0.36,
+  "pattern": "afterimage",
+  "onset_ticks": 80,
+  "peak_ticks": 250,
+  "recovery_ticks": 300
+}

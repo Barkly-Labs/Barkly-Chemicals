@@ -1,8 +1,8 @@
 package com.barklylabs.chemlab.client;
 
 import com.barklylabs.chemlab.config.ChemLabConfig;
-import net.minecraft.client.Minecraft;
-import net.minecraft.resources.ResourceLocation;
+import com.mojang.logging.LogUtils;
+import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,6 +10,7 @@ import java.util.List;
 
 /** Local-only, reversible perception layers. Gameplay and movement input are never altered here. */
 public final class ClientExperienceState {
+    private static final Logger LOGGER = LogUtils.getLogger();
     private static final List<Active> ACTIVE = new ArrayList<>();
     private static final List<ActiveAdditive> ADDITIVES = new ArrayList<>();
     private static long ticks;
@@ -25,6 +26,7 @@ public final class ClientExperienceState {
         ACTIVE.removeIf(active -> active.profile.id().equals(profile.id()));
         if (ACTIVE.size() >= 6) ACTIVE.remove(ACTIVE.stream().min(java.util.Comparator.comparingDouble(a -> a.profile.strength())).orElseThrow());
         ACTIVE.add(new Active(profile, Math.max(20, Math.min(12000, durationTicks)), ticks));
+        LOGGER.info("Started client experience layer '{}' for {} ticks (profile strength {}, local intensity {}, catalog size {})", key, durationTicks, profile.strength(), ChemLabConfig.CLIENT_INTENSITY.get(), ExperienceProfileCatalog.size());
     }
 
     public static void clear() { ACTIVE.clear(); ADDITIVES.clear(); }
