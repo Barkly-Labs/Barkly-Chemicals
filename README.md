@@ -41,6 +41,10 @@ The mod registers 30 items and one block. Each item has a registry ID, English n
 
 The additional profiles are fictional Minecraft artifacts. Their short vanilla effects and playful messages do not claim to represent real substances.
 
+### Texture atlas and references
+
+Every registered item has its own generated 16×16 pixel-art texture. The 15 named substance items use physical-form references such as dried leaves, tablets, capsules, crystalline powders, clear liquid, and a gas cylinder; the other items have distinct laboratory or fictional-material silhouettes. See [TEXTURE_MAPPING.md](TEXTURE_MAPPING.md) for the complete registry-to-file mapping and the visual reference rationale for each item.
+
 ## Configuration and accessibility
 
 After first launch, edit `config/barklychemlab-common.toml`:
